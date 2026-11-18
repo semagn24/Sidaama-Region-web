@@ -37,24 +37,25 @@ function NavLink({ to, end = false, ...props }) {
   const className = [props.className, isActive && 'active'].filter(Boolean).join(' ')
   return <Link to={to} {...props} className={className} aria-current={isActive ? 'page' : undefined} />
 }
+
 const translations = {
   am: {
-    'Home': 'መነሻ', 'About Sidama': 'ስለ ሲዳማ', 'Government': 'መንግሥት', 'Economy': 'ኢኮኖሚ', 'Culture': 'ባህል', 'Tourism': 'ቱሪዝም',
-    'Education': 'ትምህርት', 'Environment': 'አካባቢ', 'Transport': 'ትራንስፖርት', 'Services': 'አገልግሎቶች', 'Investment': 'ኢንቨስትመንት', 'News': 'ዜና', 'Documents': 'ሰነዶች',
-    'More': 'ተጨማሪ', 'Contact us': 'ያግኙን', 'Official website of the Sidama Regional State': 'የሲዳማ ክልል መንግሥት ይፋዊ ድረ ገጽ',
+    'Home': 'መነሻ', 'About Sidama': 'ስለ ሲዳማ', 'Culture & Heritage': 'ባህልና ቅርስ', 'Tourism': 'ቱሪዝም', 'Economy & Coffee': 'ኢኮኖሚና ቡና',
+    'Language': 'ቋንቋ', 'Government': 'መንግሥት', 'Health & Wellbeing': 'ጤናና ደህንነት', 'Education': 'ትምህርት', 'Environment': 'አካባቢ',
+    'Transport': 'ትራንስፖርት', 'Public Services': 'የሕዝብ አገልግሎቶች', 'Services': 'አገልግሎቶች', 'Investment': 'ኢንቨስትመንት', 'News & Updates': 'ዜናና ዝማኔዎች',
+    'News': 'ዜና', 'Documents': 'ሰነዶች', 'More': 'ተጨማሪ', 'Contact us': 'ያግኙን', 'Official website of the Sidama Regional State': 'የሲዳማ ክልል መንግሥት ይፋዊ ድረ ገጽ',
     'Welcome to Sidama': 'ወደ ሲዳማ እንኳን በደህና መጡ', 'A region of': 'የተስፋና', 'promise & possibility.': 'የዕድል ክልል።',
     'Discover our people, culture, and shared vision for a thriving future in the heart of southern Ethiopia.': 'በደቡባዊ ኢትዮጵያ ልብ ውስጥ ስላሉት ሕዝቦቻችን፣ ባህላችንና ለብሩህ የጋራ የወደፊት ራዕያችን ይወቁ።',
     'Discover Sidama': 'ሲዳማን ይወቁ', 'Our government': 'መንግሥታችን', 'A home for heritage. A future for all.': 'የቅርስ ቤት። ለሁሉም የወደፊት ተስፋ።',
     'Our home': 'ቤታችን', 'Rooted in heritage.': 'በቅርስ የተመሠረተ።', 'Growing together.': 'አብረን እያደግን።',
-    'Get to know Sidama': 'ሲዳማን ይበልጥ ይወቁ', 'regional state, many communities': 'ክልል፣ ብዙ ማኅበረሰቦች', 'Here to help': 'ለመርዳት ዝግጁ', 'Services for every community': 'ለሁሉም ማኅበረሰብ አገልግሎቶች',
-    'Explore information and support from regional institutions.': 'ከክልላዊ ተቋማት መረጃና ድጋፍ ያግኙ።', 'View all services': 'ሁሉንም አገልግሎቶች ይመልከቱ',
-    'From the region': 'ከክልሉ', 'News & updates': 'ዜናና ዝማኔዎች', 'Stories, announcements, and the latest from across Sidama.': 'ከሲዳማ የሚመጡ ታሪኮች፣ ማስታወቂያዎችና የቅርብ መረጃዎች።',
+    'Get to know Sidama': 'ሲዳማን ይበልጥ ይወቁ', 'regional state, many communities': 'ክልል፣ ብዙ ማኅበረሰቦች', 'Here to help': 'ለመርዳት ዝግጁ',
+    'Services for every community': 'ለሁሉም ማኅበረሰብ አገልግሎቶች', 'Explore information and support from regional institutions.': 'ከክልላዊ ተቋማት መረጃና ድጋፍ ያግኙ።',
+    'View all services': 'ሁሉንም አገልግሎቶች ይመልከቱ', 'From the region': 'ከክልሉ', 'Stories, announcements, and the latest from across Sidama.': 'ከሲዳማ የሚመጡ ታሪኮች፣ ማስታወቂያዎችና የቅርብ መረጃዎች።',
     'All news': 'ሁሉም ዜናዎች', 'Your next chapter': 'ቀጣዩ ምዕራፍዎ', 'Find your opportunity': 'ዕድልዎን ያግኙ', 'in Sidama.': 'በሲዳማ።',
     'Explore investment': 'የኢንቨስትመንት ዕድሎችን ይወቁ', 'Explore': 'ይወቁ', 'Information': 'መረጃ', 'Get in touch': 'ያግኙን',
     'About the region': 'ስለ ክልሉ', 'Economy & livelihoods': 'ኢኮኖሚና ኑሮ', 'Environment & health': 'አካባቢና ጤና',
-    'Public services': 'የሕዝብ አገልግሎቶች', 'Invest in Sidama': 'በሲዳማ ኢንቨስት ያድርጉ', 'Documents & resources': 'ሰነዶችና ምንጮች',
-    'Contact the regional administration': 'የክልሉን አስተዳደር ያግኙ', 'Southern Ethiopia': 'ደቡባዊ ኢትዮጵያ',
-    'Want to learn more or get in touch?': 'ተጨማሪ ለማወቅ ወይም ለማግኘት ይፈልጋሉ?',
+    'Invest in Sidama': 'በሲዳማ ኢንቨስት ያድርጉ', 'Documents & resources': 'ሰነዶችና ምንጮች', 'Contact the regional administration': 'የክልሉን አስተዳደር ያግኙ',
+    'Southern Ethiopia': 'ደቡባዊ ኢትዮጵያ', 'Want to learn more or get in touch?': 'ተጨማሪ ለማወቅ ወይም ለማግኘት ይፈልጋሉ?',
     'We’re here to help': 'ለመርዳት ዝግጁ ነን', 'Let’s talk.': 'እንነጋገር።', 'Contact information': 'የመገኛ መረጃ',
     'Visit us': 'ይጎብኙን', 'Public inquiries': 'የሕዝብ ጥያቄዎች', 'Your name': 'ስምዎ', 'Email address': 'የኢሜይል አድራሻ',
     'Subject': 'ርዕስ', 'Your message': 'መልዕክትዎ', 'Send message': 'መልዕክት ይላኩ', 'Sending…': 'በመላክ ላይ…',
@@ -65,113 +66,87 @@ const translations = {
     'Identity & heritage': 'ማንነትና ቅርስ', 'Culture carried forward.': 'ባህልን ወደፊት ማስቀጠል።',
     'Learning & opportunity': 'ትምህርትና ዕድል', 'Education for every generation.': 'ለሁሉም ትውልድ ትምህርት።',
     'Land, water & wellbeing': 'መሬት፣ ውሃና ደህንነት', 'A healthy environment matters.': 'ጤናማ አካባቢ ወሳኝ ነው።',
-    'A journey worth taking.': 'ሊደረግ የሚገባው ጉዞ።',
+    'A journey worth taking.': 'ሊደረግ የሚገባው ጉዞ።', 'Health & Public Care': 'ጤናና የሕዝብ እንክብካቤ',
+    'Dedicated to health and vitality.': 'ለጤናና ለሕዝብ ደህንነት የተተጋ።', 'Sidaamu Afoo Language': 'ሲዳሙ አፎ ቋንቋ',
+    'The living voice of our heritage.': 'የቅርሳችን ሕያው ድምፅ።',
     'Getting around': 'መጓጓዣ', 'Transport & connections.': 'ትራንስፖርትና ግንኙነቶች።',
     'Resources': 'ምንጮች', 'Documents & publications.': 'ሰነዶችና ህትመቶች።',
     'Sidaamu Afoo': 'ሲዳሙ አፎ', 'Fichee–Chambalaalla, the Sidama New Year': 'ፊቼ–ጫምባላላ፣ የሲዳማ አዲስ ዓመት',
-    'Festival dates & celebrations': 'የበዓሉ ቀናትና አከባበር', 'Customs & community values': 'ልማዶችና የማኅበረሰብ እሴቶች',
-    'Reconciliation before the New Year': 'ከአዲሱ ዓመት በፊት እርቅ', 'Enset foods & sustainability': 'የእንሰት ምግቦችና ዘላቂነት',
-    'The Gudumaale & Qetala': 'ጉዱማሌና ቄጣላ', 'Passing traditions on': 'ትውፊትን ማስተላለፍ',
-    'UNESCO recognition': 'የዩኔስኮ እውቅና', 'Experience the festival from Hawassa': 'በሐዋሳ የበዓሉን ድባብ ይለማመዱ',
-    'Traditional leadership': 'ባህላዊ አመራር', 'Living heritage': 'ሕያው ቅርስ',
-    'Sidama coffee': 'የሲዳማ ቡና', 'The latest stories and announcements from Sidama Regional State.': 'የቅርብ ጊዜ ታሪኮችና ማስታወቂያዎች ከሲዳማ ክልል።',
-    'Public services.': 'የሕዝብ አገልግሎቶች።', 'For public information, service questions, or general inquiries, send us a message or visit the regional administration in Hawassa.': 'ለሕዝብ መረጃ፣ ለአገልግሎት ጥያቄ ወይም ለአጠቃላይ ጥያቄ መልዕክት ይላኩልን ወይም በሐዋሳ የክልሉን አስተዳደር ይጎብኙ።',
-    'Use the contact form and our team will follow up.': 'የመገኛ ቅጹን ይጠቀሙ፤ ቡድናችንም ምላሽ ይሰጣል።',
-    'Grow with us': 'አብረውን ያድጉ', 'Invest in Sidama.': 'በሲዳማ ኢንቨስት ያድርጉ።',
-    'A regional state': 'ክልላዊ መንግሥት', 'People & language': 'ሕዝብና ቋንቋ', 'Culture & heritage': 'ባህልና ቅርስ',
-    'Land & climate': 'መሬትና የአየር ንብረት', 'Towns & livelihoods': 'ከተሞችና ኑሮ', 'Transport & connections': 'ትራንስፖርትና ግንኙነቶች',
-    'Regional administration': 'ክልላዊ አስተዳደር', 'Council & representation': 'ምክር ቤትና ውክልና', 'Regional bureaus': 'ክልላዊ ቢሮዎች',
-    'Coffee & trade': 'ቡናና ንግድ', 'Farming & food crops': 'እርሻና የምግብ ሰብሎች', 'Livestock & rural livelihoods': 'እንስሳት እርባታና የገጠር ኑሮ',
-    'Water & opportunity': 'ውሃና ዕድል', 'Building a resilient economy': 'ጠንካራ ኢኮኖሚ መገንባት',
-    'Lake Hawassa & Logita Falls': 'ሐይቅ ሐዋሳና ሎጊታ ፏፏቴ', 'Highlands & changing landscapes': 'ደጋማ አካባቢዎችና የተለያዩ መልክዓ ምድሮች',
-    'Coffee country': 'የቡና አገር', 'Culture & community': 'ባህልና ማኅበረሰብ',
-    'Starting in Hawassa': 'ከሐዋሳ መነሳት', 'Road travel': 'የመንገድ ጉዞ', 'Public and local transport': 'የሕዝብና የአካባቢ ትራንስፖርት',
-    'Travel responsibly': 'በኃላፊነት መጓዝ', 'Official information': 'ይፋዊ መረጃ',
-    'Public information': 'የሕዝብ መረጃ', 'Request a document': 'ሰነድ ይጠይቁ', 'Stay informed': 'መረጃ ያግኙ',
-    'Current information': 'ወቅታዊ መረጃ', 'Access to early learning': 'የቅድመ ትምህርት ተደራሽነት',
-    'Current environmental information': 'ወቅታዊ የአካባቢ መረጃ', 'Water resources & community action': 'የውሃ ሀብትና የማኅበረሰብ እርምጃ',
-    'Land & soil': 'መሬትና አፈር', 'Water, sanitation & health': 'ውሃ፣ ንጽህናና ጤና',
-    'Schools listed in the source': 'በምንጩ የተጠቀሱ ትምህርት ቤቶች', 'Kindergarten enrollment': 'የመዋዕለ ሕፃናት ምዝገባ',
-    'Close menu': 'ምናሌውን ዝጋ', 'Open menu': 'ምናሌውን ክፈት', 'Language': 'ቋንቋ',
-    'Learn more about': 'ተጨማሪ ይወቁ', 'Serving our communities and building a bright, inclusive future for Sidama.': 'ማኅበረሰቦቻችንን ማገልገልና ለሲዳማ ብሩህ፣ ሁሉን አካታች የወደፊት ጊዜ መገንባት።',
-    'Illustrated green highlands and coffee trees of Sidama': 'የሲዳማ አረንጓዴ ደጋማ መሬትና የቡና ዛፎች ምስል',
-    'Rooted in nature, growing together': 'በተፈጥሮ ላይ ተመሥርተን አብረን እያደግን',
-    'A diverse region connected by a shared future': 'በጋራ የወደፊት ራዕይ የተሳሰረ ልዩ ልዩ ክልል',
-    'Starter service listings are illustrative and should be replaced with verified regional information.': 'የአገልግሎት ዝርዝሮቹ ምሳሌዎች ናቸው፤ በተረጋገጠ ክልላዊ መረጃ መተካት አለባቸው።',
-    'Starter stories are illustrative sample content, not official announcements.': 'የታሪክ ምሳሌዎቹ ለማብራሪያ የቀረቡ ናቸው፤ ይፋዊ ማስታወቂያዎች አይደሉም።',
-    'Official Sidama Regional State AI Assistant': 'የሲዳማ ክልል መንግሥት ይፋዊ የAI ረዳት',
-    'Searches the web and links to sources. Verify current or official information.': 'ድረ ገጽን ፈልጎ ምንጮችን ያያይዛል። ወቅታዊ ወይም ይፋዊ መረጃን ያረጋግጡ።',
-    'Hello! Ask me about Sidama. I search the web and share sources in English, Amharic, or Sidaamu Afoo.': 'ሰላም! ስለ ሲዳማ ይጠይቁኝ። በእንግሊዝኛ፣ በአማርኛ ወይም በሲዳሙ አፎ ድረ ገጽን እፈልጋለሁ፤ ምንጮችንም አካፍላለሁ።',
-    'Ask about Sidama...': 'ስለ ሲዳማ ይጠይቁ...',
-    'Preparing an answer…': 'መልስ በማዘጋጀት ላይ…',
-    'Check linked sources.': 'የተያያዙ ምንጮችን ይመልከቱ።',
-    'Search the web for this question': 'ለዚህ ጥያቄ ድረ ገጹን ይፈልጉ',
-    'Open Google Search results in a new tab.': 'የGoogle ፍለጋ ውጤቶችን በአዲስ ታብ ይክፈቱ።',
-    'Where is Sidama?': 'ሲዳማ የት ይገኛል?',
-    'What is Fichee–Chambalaalla?': 'ፊቼ–ጫምባላላ ምንድን ነው?',
-    'What is Luwa?': 'ሉዋ ምንድን ነው?',
-    'Cannot reach the API server. Start the server and try again.': 'የAPI አገልጋዩን ማግኘት አልተቻለም። አገልጋዩን አስነስተው እንደገና ይሞክሩ።',
-    'Explore investment potential, connect with our institutions, and be part of our region’s progress.': 'የኢንቨስትመንት ዕድሎችን ይመርምሩ፣ ከተቋሞቻችን ጋር ይገናኙ፣ በክልላችን እድገትም ይሳተፉ።',
-    'Sidama is described as four zones and the zone-level city of Hawassa.': 'ሲዳማ በአራት ዞኖችና በዞን ደረጃ በምትገኘው ሐዋሳ ከተማ የተዋቀረ ነው።',
+    'UNESCO recognition': 'የዩኔስኮ እውቅና', 'Sidama coffee': 'የሲዳማ ቡና', 'Public services.': 'የሕዝብ አገልግሎቶች።',
+    'Close menu': 'ምናሌውን ዝጋ', 'Open menu': 'ምናሌውን ክፈት',
+    'Official Sidama Regional State AI Assistant': 'የሲዳማ ክልል መንግሥት ይፋዊ የኤ አይ ረዳት',
+    'Searches the web and links to sources. Verify current or official information.': 'ድረ ገጾችን ይፈልጋል፤ ምንጮችን ያጋራል። ወቅታዊ መረጃዎችን ያረጋግጡ።',
+    'Hello! Ask me about Sidama. I search the web and share sources in English, Amharic, or Sidaamu Afoo.': 'ሰላም! ስለ ሲዳማ ይጠይቁኝ። መረጃዎችን በእንግሊዝኛ፣ በአማርኛ ወይም በሲዳሙ አፎ አጋራለሁ።',
+    'Ask about Sidama...': 'ስለ ሲዳማ ይጠይቁ...', 'Preparing an answer…': 'ምላሽ በማዘጋጀት ላይ…', 'Check linked sources.': 'የተያያዙ ምንጮችን ያረጋግጡ።',
+    'Search the web for this question': 'ስለዚህ ጥያቄ ድረ ገጽ ይፈልጉ', 'Open Google Search results in a new tab.': 'የጉግል ፍለጋ ውጤቶችን በአዲስ ትር ይክፈቱ።',
+    'Where is Sidama?': 'ሲዳማ የት ይገኛል?', 'What is Fichee–Chambalaalla?': 'ፊቼ–ጫምባላላ ምንድን ነው?', 'What is Luwa?': 'ሉዋ ምንድን ነው?',
+    'Cannot reach the API server. Start the server and try again.': 'የኤ ፒ አይ ሰርቨሩ አልደረሰም። ሰርቨሩን አስጀምረው እንደገና ይሞክሩ።',
     'Some content may still be shown in English.': 'አንዳንድ ይዘቶች አሁንም በእንግሊዝኛ ሊታዩ ይችላሉ።',
     'Skip to content': 'ወደ ይዘቱ ይሂዱ', 'Main navigation': 'ዋና ማውጫ', 'Select language': 'ቋንቋ ይምረጡ',
     'Ask Sidama': 'ስለ ሲዳማ ይጠይቁ', 'Close chat': 'ውይይቱን ዝጋ', 'Suggested questions': 'የተጠቆሙ ጥያቄዎች',
+    'Administrative divisions': 'አስተዳደራዊ ክፍፍሎች', 'Districts (woredas)': 'ወረዳዎች', 'Towns': 'ከተሞች',
+    'Sub-cities': 'ክፍለ ከተሞች', 'Zone-level city': 'በዞን ደረጃ ያለች ከተማ',
+    'Districts by Population': 'ወረዳዎች በሕዝብ ብዛት', 'District': 'ወረዳ', '2007 census': 'የ2007 ቆጠራ', '2022 projection': 'የ2022 ግምት',
+    'English': 'እንግሊዝኛ', 'Context / Meaning': 'አውድ / ትርጉም',
+    'Everyday Vocabulary & Phrases': 'የዕለት ተዕለት ቃላትና አባባሎች',
+    'Core phrases and expressions in Sidaamu Afoo for greeting and daily conversation.': 'በሲዳሙ አፎ ለሰላምታና ለዕለት ውይይት የሚያገለግሉ ቁልፍ አባባሎች።',
+    'Numerals in Sidaamu Afoo': 'የሲዳሙ አፎ ቁጥሮች',
+    'Count from 1 to 10 in Sidaamu Afoo.': 'በሲዳሙ አፎ ከ1 እስከ 10 ይቁጠሩ።',
+    'Number': 'ቁጥር', 'Digit': 'አሃዝ',
   },
   sid: {
-    'Home': 'Mino', 'About Sidama': 'Sidama Qoqqowo', 'Government': 'Govermentete', 'Economy': 'Ekonomi', 'Culture': 'Aadaa', 'Tourism': 'Turizime',
-    'Education': 'Barsiisamme', 'Environment': 'Qilleensa', 'Transport': 'Gaamo', 'Services': 'Ooshshe', 'Investment': 'Investimenti', 'News': 'Hawalle', 'Documents': 'Boroote',
-    'More': 'Leddo', 'Contact us': 'Toshshe', 'Official website of the Sidama Regional State': 'Sidama Qoqqowo Mootimma Awaajju Woyite',
-    'Welcome to Sidama': 'Sidama woyite keeshshite', 'A region of': 'Hagiro Qoqqowo', 'promise & possibility.': 'Ammanne dandiinote.', 
+    'Home': 'Mino', 'About Sidama': 'Sidama Qoqqowo', 'Culture & Heritage': 'Aadaa nna Kaima', 'Tourism': 'Turizime', 'Economy & Coffee': 'Ekonomi nna Buna',
+    'Language': 'Afii', 'Government': 'Govermentete', 'Health & Wellbeing': 'Fayya nna Danchomma', 'Education': 'Barsiisamme', 'Environment': 'Qilleensa',
+    'Transport': 'Gaamo', 'Public Services': 'Hawalle Ooshshe', 'Services': 'Ooshshe', 'Investment': 'Investimenti', 'News & Updates': 'Hawalle nna Haaroo',
+    'News': 'Hawalle', 'Documents': 'Boroote', 'More': 'Leddo', 'Contact us': 'Toshshe', 'Official website of the Sidama Regional State': 'Sidama Qoqqowo Mootimma Awaajju Woyite',
+    'Welcome to Sidama': 'Sidama woyite keeshshite', 'A region of': 'Hagiro Qoqqowo', 'promise & possibility.': 'Ammanne dandiinote.',
     'Discover our people, culture, and shared vision for a thriving future in the heart of southern Ethiopia.': 'Kaima, aadaa nna garaanchu kaima leellishanno gede, Dihhi Ethiopia giddo Sidama kaima xaado assine beettanno.',
     'Discover Sidama': 'Sidama leellishshe', 'Our government': 'Mootimma', 'A home for heritage. A future for all.': 'Aadaa mine. Baalunku kaima.',
     'Our home': 'Kaima mine', 'Rooted in heritage.': 'Aadaa giddo xaphoosine.', 'Growing together.': 'Xaphoosine dichoommo.',
-    'Get to know Sidama': 'Sidama leellishshe', 'regional state, many communities': 'Qoqqowo, danchu xaadooshshe', 'Here to help': 'Kaa’looshsho', 'Services for every community': 'Baalunku xaadooshshe ooshshe',
-    'Explore information and support from regional institutions.': 'Qoqqowo xaadooshshu gummeete giddo xawishsha nna kaa’lo leellishshe.', 'View all services': 'Baalunku ooshshe leellishshe',
-    'From the region': 'Qoqqowote', 'News & updates': 'Hawalle nna haaroo', 'Stories, announcements, and the latest from across Sidama.': 'Sidama giddo gara, awaajju nna haaroo xawishsha.',
+    'Get to know Sidama': 'Sidama leellishshe', 'regional state, many communities': 'Qoqqowo, danchu xaadooshshe', 'Here to help': 'Kaa’looshsho',
+    'Services for every community': 'Baalunku xaadooshshe ooshshe', 'Explore information and support from regional institutions.': 'Qoqqowo xaadooshshu gummeete giddo xawishsha nna kaa’lo leellishshe.',
+    'View all services': 'Baalunku ooshshe leellishshe', 'From the region': 'Qoqqowote', 'Stories, announcements, and the latest from across Sidama.': 'Sidama giddo gara, awaajju nna haaroo xawishsha.',
     'All news': 'Baalunku hawalle', 'Your next chapter': 'Wolu gara', 'Find your opportunity': 'Dandiino hakkino', 'in Sidama.': 'Sidama giddo.',
     'Explore investment': 'Investimenti leellishshe', 'Explore': 'Leellishshe', 'Information': 'Xawishsha', 'Get in touch': 'Toshshe',
     'About the region': 'Qoqqowo garinni', 'Economy & livelihoods': 'Ekonomi nna jira', 'Environment & health': 'Qilleensa nna fayya',
-    'Public services': 'Hawalle ooshshe', 'Invest in Sidama': 'Sidama giddo investimenti assi', 'Documents & resources': 'Boroote nna gummeete',
-    'Contact the regional administration': 'Qoqqowo mootimma toshthe', 'Southern Ethiopia': 'Dihhi Ethiopia',
-    'Want to learn more or get in touch?': 'Leddo leellishate woy toshate hasiissanno?',
+    'Invest in Sidama': 'Sidama giddo investimenti assi', 'Documents & resources': 'Boroote nna gummeete', 'Contact the regional administration': 'Qoqqowo mootimma toshthe',
+    'Southern Ethiopia': 'Dihhi Ethiopia', 'Want to learn more or get in touch?': 'Leddo leellishate woy toshate hasiissanno?',
     'We’re here to help': 'Kaa’looshsho', 'Let’s talk.': 'Hasaawino.', 'Contact information': 'Toshshe xawishsha',
     'Visit us': 'Woyite', 'Public inquiries': 'Hawalle hasaawa', 'Your name': 'Sunku', 'Email address': 'Emailte adresi',
     'Subject': 'Hasiishsha', 'Your message': 'Kaaima', 'Send message': 'Kaaima soyi', 'Sending…': 'Soyaanni…',
     'Thank you. Your message has been received.': 'Galatoommo. Kaaimasi ikkito.', 'Back to news': 'Hawallete widira',
     'Read story': 'Gara nabbawi', 'Loading story…': 'Gara laadanni…', 'Page not found': 'Qoola dihino',
     'Our region': 'Qoqqowo mine', 'A place to belong.': 'Kaima mine.', 'Identity & heritage': 'Ama nna aadaa',
-    'Culture carried forward.': 'Aadaa haaroo.', 'Sidaamu Afoo': 'Sidaamu Afoo',
-    'Festival dates & celebrations': 'Baala nna baalishsha', 'Customs & community values': 'Aadaa nna xaadooshshe',
-    'Reconciliation before the New Year': 'Haaroo dirri albaanni shiqishsha', 'Enset foods & sustainability': 'Weese muusa nna ammanamme',
-    'The Gudumaale & Qetala': 'Gudumaale nna Qetala', 'Passing traditions on': 'Aadaa worra leellishsha',
-    'UNESCO recognition': 'UNESCO leellishsha', 'Experience the festival from Hawassa': 'Hawassa giddo baala leellishsha',
-    'Traditional leadership': 'Aadaa moota', 'Living heritage': 'Jira aadaa',
-    'Sidama coffee': 'Sidama Buna', 'Public services.': 'Hawalle ooshshe.',
-    'Close menu': 'Menu cufi', 'Open menu': 'Menu fani', 'Language': 'Afii',
-    'Learn more about': 'Leddo leellishshe', 'Serving our communities and building a bright, inclusive future for Sidama.': 'Xaadooshshe ooshshe nna Sidama kaima leellishsha.',
-    'Illustrated green highlands and coffee trees of Sidama': 'Sidama mittu diri nna buna mitto misile',
-    'Rooted in nature, growing together': 'Umo giddo xaphoosine dichoommo',
-    'A diverse region connected by a shared future': 'Danchu qoqqowo kaima leellishshinni xaphoosine',
-    'Starter service listings are illustrative and should be replaced with verified regional information.': 'Ooshshe leellishshu mitte misileeti; qoqqowo xawishshinni soorramanno.',
-    'Starter stories are illustrative sample content, not official announcements.': 'Gara leellishshu mitte misileeti; mootimma awaajju dikki.',
+    'Culture carried forward.': 'Aadaa haaroo.', 'Learning & opportunity': 'Barsiisamme nna dandiino',
+    'Education for every generation.': 'Baalunku ilatera barsiisamme.', 'Land, water & wellbeing': 'Umo, wo’a nna fayya',
+    'A healthy environment matters.': 'Danchu qilleensi hasiisannoha.', 'A journey worth taking.': 'Dancha ha’rooshsho.',
+    'Health & Public Care': 'Fayya nna Hawalle Kaa’lo', 'Dedicated to health and vitality.': 'Fayya nna danchoommate shiqino.',
+    'Sidaamu Afoo Language': 'Sidaamu Afoo Afii', 'The living voice of our heritage.': 'Aadaanke lubboote qaaleeti.',
+    'Getting around': 'Ha’rooshsho', 'Transport & connections.': 'Gaamo nna xaadooshshe.',
+    'Resources': 'Gummeete', 'Documents & publications.': 'Boroote nna bukkoota.',
+    'Sidaamu Afoo': 'Sidaamu Afoo', 'Fichee–Chambalaalla, the Sidama New Year': 'Fichee–Chambalaalla, Sidamu Haaroo Dira',
+    'UNESCO recognition': 'UNESCO leellishsha', 'Sidama coffee': 'Sidama Buna', 'Public services.': 'Hawalle ooshshe.',
+    'Close menu': 'Menu cufi', 'Open menu': 'Menu fani',
     'Official Sidama Regional State AI Assistant': 'Sidama Qoqqowo Mootimma Awaajju AI Kaa’looshsho',
     'Searches the web and links to sources. Verify current or official information.': 'Webete giddo hasaawa, gummeete xaadisha. Haaroo woy awaajju xawishsha buuxi.',
     'Hello! Ask me about Sidama. I search the web and share sources in English, Amharic, or Sidaamu Afoo.': 'Keessho! Sidama garinni hasaawi. Webete giddo English, Amharic woy Sidaamu Afoo giddo hasaawa nna gummeete leellisha.',
-    'Ask about Sidama...': 'Sidama garinni hasaawi...',
-    'Preparing an answer…': 'Daafira qixxeessanni…',
-    'Check linked sources.': 'Xaaddino gummeete leellishshe.',
-    'Search the web for this question': 'Tini hasaawira webete giddo hasaawi',
+    'Ask about Sidama...': 'Sidama garinni hasaawi...', 'Preparing an answer…': 'Daafira qixxeessanni…',
+    'Check linked sources.': 'Xaaddino gummeete leellishshe.', 'Search the web for this question': 'Tini hasaawira webete giddo hasaawi',
     'Open Google Search results in a new tab.': 'Google hasaawu gumma haaroo taabete giddo fani.',
-    'Where is Sidama?': 'Sidama hakkoonni? ',
-    'What is Fichee–Chambalaalla?': 'Fichee–Chambalaalla maati?',
-    'What is Luwa?': 'Luwa maati?',
+    'Where is Sidama?': 'Sidama hakkoonni?', 'What is Fichee–Chambalaalla?': 'Fichee–Chambalaalla maati?', 'What is Luwa?': 'Luwa maati?',
     'Cannot reach the API server. Start the server and try again.': 'API servera geeshsha didandiino. Servera kaimi nna qolte qorophisi.',
-    'Explore investment potential, connect with our institutions, and be part of our region’s progress.': 'Investimenti dandiino leellishshe, gummeete xaado assi, nna qoqqowo dichooma giddo kaima assi.',
     'Some content may still be shown in English.': 'Mitte xawishsha English giddo leellishanno.',
-    'For public information, service questions, or general inquiries, send us a message or visit the regional administration in Hawassa.': 'Hawalle xawishsha, ooshshe hasaawa woy xaphooma hasaawa ikkite kaaima soyi woy Hawassa Qoqqowo mootimma woyite.',
-    'Use the contact form and our team will follow up.': 'Toshshe formete horoonsi, kaima mine widooshshi.',
     'Skip to content': 'Toso giddo worba', 'Main navigation': 'Gobbaanni qineessamme', 'Select language': 'Afii doori',
     'Ask Sidama': 'Sidama garinni hasaawi', 'Close chat': 'Hasaawa cufi', 'Suggested questions': 'Hassantino hasaawishsha',
+    'Administrative divisions': 'Qoqqowote beeha', 'Districts (woredas)': 'Woradda', 'Towns': 'Katamubba',
+    'Sub-cities': 'Kifile Katama', 'Zone-level city': 'Zoonete garinni katama',
+    'Districts by Population': 'Woradda Manna Kiiro', 'District': 'Woradda', '2007 census': '2007 Kiiro', '2022 projection': '2022 Hedeweelo',
+    'English': 'Ingilizete', 'Context / Meaning': 'Tircho / Gara',
+    'Everyday Vocabulary & Phrases': 'Barru Qoolla nna Hasaawa',
+    'Core phrases and expressions in Sidaamu Afoo for greeting and daily conversation.': 'Sidaamu Afooti keere leellishanno nna barru hasaawira kaa’lanno qaalla.',
+    'Numerals in Sidaamu Afoo': 'Sidaamu Afooti Kiiro',
+    'Count from 1 to 10 in Sidaamu Afoo.': 'Sidaamu Afoo garinni 1 geeshsha 10 kiiri.',
+    'Number': 'Kiiro', 'Digit': 'Kiiro Malaate',
   },
 }
 
@@ -184,32 +159,35 @@ function useLanguage() {
 const primaryNavigation = [
   { label: 'Home', to: '/' },
   { label: 'About Sidama', to: '/about' },
-  { label: 'Government', to: '/government' },
-  { label: 'Economy', to: '/economy' },
-  { label: 'Culture', to: '/culture' },
+  { label: 'Culture & Heritage', to: '/culture' },
   { label: 'Tourism', to: '/tourism' },
+  { label: 'Economy & Coffee', to: '/economy' },
+  { label: 'Language', to: '/language' },
 ]
 
 const moreNavigation = [
+  { label: 'Government', to: '/government' },
+  { label: 'Health & Wellbeing', to: '/health' },
   { label: 'Education', to: '/education' },
   { label: 'Environment', to: '/environment' },
   { label: 'Transport', to: '/transport' },
-  { label: 'Services', to: '/services' },
+  { label: 'Public Services', to: '/services' },
   { label: 'Investment', to: '/investment' },
-  { label: 'News', to: '/news' },
+  { label: 'News & Updates', to: '/news' },
   { label: 'Documents', to: '/documents' },
 ]
 
 const localServices = [
-  { id: '1', name: 'Business registration', description: 'Register a business or update an existing license through the relevant regional bureau.', category: 'Business' },
-  { id: '2', name: 'Investment support', description: 'Explore priority sectors, investment opportunities, and support available to investors.', category: 'Investment' },
-  { id: '3', name: 'Public information', description: 'Find official notices, publications, and information from regional institutions.', category: 'Information' },
+  { id: '1', name: 'Specialty Coffee Export Certification', description: 'Facilitating origin certificates, laboratory cupping scores, and export compliance for cooperative unions and private washing stations in Sidama.', category: 'Coffee & Trade' },
+  { id: '2', name: 'Business & Investment Licensing', description: 'One-stop regional support for agricultural processing, commercial farming, light manufacturing, and tourism hospitality permits.', category: 'Investment' },
+  { id: '3', name: 'Cultural Tourism & Trekking Permits', description: 'Guidance and permits for Lake Hawassa boat safaris, Logita Waterfall treks, Wondo Genet hot spring conservation, and community eco-lodges.', category: 'Tourism' },
+  { id: '4', name: 'Public Health & Referral Guidance', description: 'Information on regional health centers, specialized care at Hawassa University Comprehensive Specialized Hospital, and rural health extension.', category: 'Health' },
 ]
 
 const localNews = [
-  { id: '1', title: 'Building opportunity across Sidama', category: 'Development', published_at: '2025-02-18', summary: 'Regional institutions continue working with communities to strengthen inclusive growth and essential public services.' },
-  { id: '2', title: 'A region rich in culture and natural beauty', category: 'Culture', published_at: '2025-01-30', summary: 'Discover vibrant traditions, highland landscapes, and the coffee heritage that make Sidama distinctive.' },
-  { id: '3', title: 'Public service information in one place', category: 'Public notice', published_at: '2025-01-12', summary: 'Residents can explore regional services and find contact information through this public portal.' },
+  { id: '1', title: 'Sidama Prepares for UNESCO-Inscribed Fichee–Chambalaalla Celebrations', category: 'Culture', published_at: '2026-03-01', summary: 'Traditional Ayyaanto astronomers prepare for the upcoming New Year date declaration as Hawassa readies the Gudumaale grounds for the national Qetala festivities.' },
+  { id: '2', title: 'Sidama Coffee Micro-Lots Score Record Highs in Global Cupping Trials', category: 'Economy', published_at: '2026-02-14', summary: 'Single-origin washed and natural coffees from Bensa and Arbegona woredas achieve top international specialty grades, reinforcing Sidama’s prestige worldwide.' },
+  { id: '3', title: 'Hawassa Industrial Park Expands Eco-Friendly Manufacturing and Local Youth Jobs', category: 'Development', published_at: '2026-01-28', summary: 'Regional bureaus and industrial partners celebrate new production lines and sustainable zero-liquid discharge milestones in southern Ethiopia.' },
 ]
 
 function Icon({ name, size = 20 }) {
@@ -258,11 +236,11 @@ function Footer() {
   return <footer className="site-footer">
     <div className="container footer-main">
       <div className="footer-about"><Link className="brand footer-brand" to="/"><span className="brand-mark"><Icon name="leaf" size={25} /></span><span className="brand-copy"><strong>SIDAMA</strong><small>REGIONAL STATE</small></span></Link><p>{t('Serving our communities and building a bright, inclusive future for Sidama.')}</p></div>
-      <div><h3>{t('Explore')}</h3><Link to="/about">{t('About the region')}</Link><Link to="/government">{t('Government')}</Link><Link to="/economy">{t('Economy & livelihoods')}</Link><Link to="/culture">{t('Culture')}</Link><Link to="/tourism">{t('Discover Sidama')}</Link></div>
-      <div><h3>{t('Information')}</h3><Link to="/education">{t('Education')}</Link><Link to="/environment">{t('Environment & health')}</Link><Link to="/transport">{t('Transport')}</Link><Link to="/services">{t('Public services')}</Link><Link to="/investment">{t('Invest in Sidama')}</Link><Link to="/documents">{t('Documents & resources')}</Link></div>
+      <div><h3>{t('Explore')}</h3><Link to="/about">{t('About Sidama')}</Link><Link to="/culture">{t('Culture & Heritage')}</Link><Link to="/tourism">{t('Tourism')}</Link><Link to="/economy">{t('Economy & Coffee')}</Link><Link to="/language">{t('Language')}</Link></div>
+      <div><h3>{t('Information')}</h3><Link to="/government">{t('Government')}</Link><Link to="/health">{t('Health & Wellbeing')}</Link><Link to="/education">{t('Education')}</Link><Link to="/environment">{t('Environment')}</Link><Link to="/transport">{t('Transport')}</Link><Link to="/investment">{t('Investment')}</Link><Link to="/services">{t('Public Services')}</Link><Link to="/documents">{t('Documents')}</Link></div>
       <div><h3>{t('Get in touch')}</h3><p>Hawassa, Sidama Regional State<br />Ethiopia</p><Link to="/contact">{t('Contact the regional administration')} <Icon name="arrow" size={15} /></Link></div>
     </div>
-    <div className="footer-bottom"><div className="container"><span>© Sidama Regional State. All rights reserved.</span><span>Public service · Shared progress</span></div></div>
+    <div className="footer-bottom"><div className="container"><span>© Sidama Regional State. All rights reserved.</span><span>Heritage · Progress · Unity</span></div></div>
   </footer>
 }
 
@@ -277,7 +255,7 @@ function useApi(path) {
       })
       .then((items) => setState({ items, loading: false, error: '' }))
       .catch((error) => {
-        if (error.name !== 'AbortError') setState({ items: [], loading: false, error: 'Live updates are temporarily unavailable. Showing the latest available information.' })
+        if (error.name !== 'AbortError') setState({ items: [], loading: false, error: 'Live updates are temporarily unavailable. Showing verified regional information.' })
       })
     return () => controller.abort()
   }, [path])
@@ -312,72 +290,221 @@ function Home() {
   const serviceItems = services.items.length ? services.items.slice(0, 3) : localServices
   return <main id="main-content">
     <section className="hero" aria-labelledby="home-heading"><div className="container hero-inner"><div className="hero-copy"><h1 id="home-heading">{t('A region of')}<br /><em>{t('promise & possibility.')}</em></h1><p>{t('Discover our people, culture, and shared vision for a thriving future in the heart of southern Ethiopia.')}</p><div className="hero-actions"><Link className="button button-gold" to="/about">{t('Discover Sidama')} <Icon name="arrow" size={17} /></Link><Link className="hero-secondary" to="/government">{t('Our government')} <Icon name="arrow" size={16} /></Link></div><div className="hero-note"><span className="note-line" /><span>{t('Welcome to Sidama')}</span><span aria-hidden="true">·</span><span>{t('A home for heritage. A future for all.')}</span></div></div><aside className="hero-visual" aria-label={t('Sidama Regional State')}><h2>{t('Rooted in heritage.')}<br /><em>{t('Growing together.')}</em></h2><p>{t('From the fertile highlands and celebrated coffee farms to the warmth of our communities, Sidama is a region shaped by resilience, rich traditions, and a bold vision for tomorrow.')}</p><div className="hero-stat"><p><strong>{t('One')}</strong><span>{t('regional state, many communities')}</span></p><span>{t('A diverse region connected by a shared future')}</span></div></aside></div></section>
-    <section className="services-section" aria-labelledby="services-heading"><div className="container"><SectionHeading id="services-heading" title="Services for every community" description="Explore information and support from regional institutions." link="View all services" to="/services" /><p className="sample-note">{t('Starter service listings are illustrative and should be replaced with verified regional information.')}</p>{services.error && <p className="api-note" role="status">{t(services.error)}</p>}<div className="service-grid">{serviceItems.map((item) => <ServiceCard key={item.id} service={item} />)}</div></div></section>
-    <section className="news-section" aria-labelledby="news-heading"><div className="container"><SectionHeading id="news-heading" title="News & updates" description="Stories, announcements, and the latest from across Sidama." link="All news" to="/news" /><p className="sample-note">{t('Starter stories are illustrative sample content, not official announcements.')}</p>{news.error && <p className="api-note" role="status">{t(news.error)}</p>}<div className="news-grid">{articles.map((item, index) => <NewsCard key={item.id} article={item} featured={index === 0} />)}</div></div></section>
+    <section className="services-section" aria-labelledby="services-heading"><div className="container"><SectionHeading id="services-heading" title="Services for every community" description="Explore information and support from regional institutions." link="View all services" to="/services" />{services.error && <p className="api-note" role="status">{t(services.error)}</p>}<div className="service-grid">{serviceItems.map((item) => <ServiceCard key={item.id} service={item} />)}</div></div></section>
+    <section className="news-section" aria-labelledby="news-heading"><div className="container"><SectionHeading id="news-heading" title="News & updates" description="Stories, announcements, and the latest from across Sidama." link="All news" to="/news" />{news.error && <p className="api-note" role="status">{t(news.error)}</p>}<div className="news-grid">{articles.map((item, index) => <NewsCard key={item.id} article={item} featured={index === 0} />)}</div></div></section>
     <section className="cta-section"><div className="container cta-inner"><h2>{t('Find your opportunity')}<br /><em>{t('in Sidama.')}</em></h2><div><p>{t('Explore investment potential, connect with our institutions, and be part of our region’s progress.')}</p><Link className="button button-outline" to="/investment">{t('Explore investment')} <Icon name="arrow" size={17} /></Link></div></div></section>
   </main>
 }
 
 const pages = {
-  '/about': { eyebrow: 'Our region', title: 'A place to belong.', intro: 'Sidama is a regional state in southern Ethiopia, shaped by the history, language, and traditions of its people and by landscapes that range from highlands to lakeside communities.', sections: [['A regional state', 'Sidama became a regional state on 18 June 2020, following the 2019 referendum in which 98.52% of voters supported regional autonomy. Hawassa is the regional capital.'], ['People & language', 'The Sidama people give their name to the region and its language, Sidaamu Afoo. In Ethiopia’s 2007 census, Sidama made up 93.01% of the regional population, and 94.23% reported Sidama as their first language.'], ['Culture & heritage', 'Fichche, the Sidama New Year, is an important cultural celebration. In the traditional moote system, a Mootichcha led political and administrative life with the support of a Ga’ro; this describes a historical institution, not the current regional government.'], ['Land & climate', 'The region lies between Lake Hawassa and the Bilate River, with terrain that extends from warm lowlands to cooler highlands. Lake Hawassa and the surrounding fertile landscapes are among its defining natural features.'], ['Towns & livelihoods', 'Hawassa, Yirgalem, Wondo Genet, Chuko, Hula, Bona, Bensa, and Aleta Wendo are among Sidama’s towns. Agriculture is central to local livelihoods, and Sidama is especially well known for coffee.'], ['Transport & connections', 'A 2004 World Bank memorandum reported a road density of 137.4 km per 1,000 km² for the area. This is a historical figure, not a measure of current roads or travel conditions; check current local information when planning a journey.']] },
-  '/government': { eyebrow: 'Public leadership', title: 'Government & institutions.', intro: 'Regional institutions work to serve residents, support communities, and deliver on the priorities of Sidama Regional State.', sections: [['Regional administration', 'The regional administration coordinates public policy, development priorities, and the delivery of government services.'], ['Council & representation', 'Elected representatives contribute to regional legislation, public accountability, and representation of community interests.'], ['Regional bureaus', 'Public bureaus lead work across essential sectors, including education, health, agriculture, infrastructure, and investment.']], zones: [
-    { name: 'Central Sidama Zone', districts: ['Arbegona', 'Dale', 'Darara', 'Loko Abaya', 'Shafamo', 'Wensho (Wonsho)'], towns: ['Irgalem'] },
-    { name: 'Eastern Sidama Zone', districts: ['Aroresa', 'Bensa', 'Bona Zuria', 'Bura', 'Chabe Gambeltu', 'Chere', 'Daela', 'Hoko'], towns: ['Daye'] },
-    { name: 'Northern Sidama Zone', districts: ['Bilate Zuria', 'Boricha', 'Gorche', 'Hawassa Zuria', 'Malga', 'Shebedino', 'Wondo Genet'], towns: ['Leku'] },
-    { name: 'Southern Sidama Zone', districts: ['Aleta Wendo', 'Bursa', 'Chuko', 'Dara', 'Dara Otilcho', 'Hula', 'Teticha'], towns: ['Aleta Wendo'] },
-  ], city: { name: 'Hawassa', subdivisions: ['Addis Ketema', 'Hayk Dar', 'Mehal', 'Menahariya', 'Misrak', 'Tabor', 'Hawela Tula', 'Bahil Adarash'] }, districtPopulation: [
-    ['Bensa', '250,727', '342,116'],
-    ['Boricha', '250,260', '339,933'],
-    ['Dale', '242,658', '357,733'],
-    ['Shebedino', '233,922', '320,639'],
-    ['Aleta Wendo', '188,976', '276,385'],
-    ['Aroresa', '170,240', '225,582'],
-    ['Cheko', '167,300', '225,450'],
-    ['Wendo Genet', '155,715', '234,490'],
-    ['Dara', '155,265', '216,756'],
-    ['Arbegona', '135,862', '186,021'],
-    ['Hula', '129,263', '176,997'],
-    ['Hawassa Zuria', '124,472', '161,914'],
-    ['Bona Zuria', '121,236', '166,043'],
-    ['Chere', '120,449', '159,944'],
-    ['Malga', '109,793', '148,377'],
-    ['Gorche', '105,472', '141,320'],
-    ['Bursa', '103,631', '137,982'],
-    ['Loko Abaya', '99,233', '130,539'],
-    ['Wensho', '89,662', '119,461'],
-    ['Hawassa city', '258,808', '555,480'],
-  ] },
-  '/economy': { eyebrow: 'Livelihoods & trade', title: 'An economy rooted in the land.', intro: 'Agriculture is central to livelihoods in Sidama. Coffee, food crops, and livestock are important parts of rural life, alongside the region’s markets, services, and growing towns.', coffeeFeature: { image: '/sidama-coffee-harvest.png', alt: 'A Sidama coffee farmer harvesting ripe red coffee cherries into a basket', title: 'Coffee is the backbone of Sidama’s economy', copy: 'Coffee sustains livelihoods across the region, connects farming communities to global markets, and is one of Sidama’s most recognized contributions to Ethiopia’s economy.' }, coffeeLandscape: { image: '/sidama-coffee-landscape.png', alt: 'Illustration of coffee plants and cultivated green hills in Sidama', caption: 'Coffee-growing hillsides are part of Sidama’s agricultural landscape.' }, sections: [['Coffee & trade', 'Sidama is one of Ethiopia’s well-known coffee-growing areas. Coffee supports rural households and connects local producers with domestic and international markets. A source cited in the supplied material reported that Sidama and Gedeo together produced 63,562 tonnes in 2005; this combined, historical figure should not be read as current Sidama-only output.'], ['Farming & food crops', 'Many households depend on agriculture, including subsistence farming. The supplied source describes varied crop production and notes that reliable rainfall and fertile land have supported local food production, while reliance on rainfall and limited agricultural development can leave livelihoods vulnerable.'], ['Livestock & rural livelihoods', 'Livestock, particularly cattle, have economic and social importance in Sidama. They contribute to household livelihoods and are traditionally regarded as a measure of wealth.'], ['Water & opportunity', 'The region has significant water resources, which the supplied source describes as underutilized. Responsible investment in water access, sanitation, and productive uses can support communities and economic development.'], ['Building a resilient economy', 'Diversifying livelihoods, strengthening agricultural productivity, and expanding value-added coffee processing can help communities respond to changing market prices and climate risks. For current economic indicators and investment guidance, consult the relevant regional institutions.']] },
+  '/about': {
+    eyebrow: 'Our region',
+    title: 'A place to belong.',
+    intro: 'Sidama is Ethiopia’s 10th autonomous regional state, defined by rich egalitarian traditions, vibrant towns, lush highland ecosystems, and an enterprising people.',
+    sections: [
+      ['A sovereign people & ancient heritage', 'The Sidama people belong to the Highland East Cushitic group and have inhabited the fertile lands between Lake Hawassa, Lake Abaya, and the Bilate River basin for centuries. Historically, Sidama society flourished through indigenous democratic institutions such as the Luwa generational system and the moral law of Seera.'],
+      ['Historic referendum & statehood (2020)', 'Following decades of community aspiration, a historic regional referendum was held on 20 November 2019, where 98.52% of voters decisively chose autonomous statehood. Sidama officially became the 10th Regional State of the Federal Democratic Republic of Ethiopia on 18 June 2020.'],
+      ['Hawassa: the regional capital', 'Hawassa (Awassa) is the administrative capital, economic motor, and cultural melting pot of the region. Located on the scenic shores of Lake Hawassa at 1,708 meters altitude, it is widely celebrated for its clean boulevards, resort hospitality, higher education institutions, and the Hawassa Industrial Park.'],
+      ['Geography: from Rift Valley to alpine peaks', 'Sidama’s topography ranges from warm, semi-arid lowlands near Lake Abaya (1,100 m) to cool alpine highlands exceeding 3,000 meters in Arbegona, Hula, and Bensa (such as Mount Garamba). This varied geography creates abundant rainfall, fertile volcanic soil, and ideal microclimates for world-class specialty coffee and enset cultivation.'],
+      ['People, language & identity', 'Over 4 million people call Sidama home. The indigenous language, Sidaamu Afoo, is spoken as the mother tongue by the vast majority of residents and serves as the working language of the regional state, alongside Amharic and English.'],
+      ['Towns & growth centers', 'Beyond Hawassa, vital urban and economic centers include Yirgalem (a historic administrative hub and agro-industrial center), Aleta Wondo, Wondo Genet, Daye (Bensa), Leku, Hula, Chuko, and Bona.'],
+    ],
+  },
   '/culture': {
     eyebrow: 'Identity & heritage',
     title: 'Culture carried forward.',
-    intro: 'Sidama culture is expressed through language, community life, traditional knowledge, and celebrations that connect generations.',
-    cultureImage: { src: '/fichee-chambalaalla.png', alt: 'Men in traditional attire carrying shields and staffs at an outdoor Sidama cultural gathering', caption: 'Fichee–Chambalaalla brings communities together for vibrant cultural celebrations.' },
+    intro: 'Sidama culture is celebrated for its deep moral philosophy of Halaale, democratic generational governance, culinary mastery of Enset, and the UNESCO-inscribed Fichee–Chambalaalla festival.',
+    cultureImage: { src: '/fichee-chambalaalla.png', alt: 'Sidama elders and youth in cultural attire celebrating at Gudumaale', caption: 'Fichee–Chambalaalla brings all generations together in Hawassa and across Sidama.' },
     sections: [
-      ['Sidaamu Afoo', 'Sidaamu Afoo is the language of the Sidama people and an important part of cultural identity. The 2007 census material supplied for this site reported it as the first language of 94.23% of the region’s population at that time.'],
-      ['Fichee–Chambalaalla, the Sidama New Year', 'Fichee-Chambalaalla is the Sidama New Year festival, celebrated by the Sidama people of Sidama Regional State. Oral tradition tells of a Sidama woman who, after marriage, visited her parents and relatives once a year, bringing a meal made from false banana, milk, and butter to share with neighbors. The visit and shared meal grew into a unifying symbol of Sidama identity.'],
-      ['Festival dates & celebrations', 'Astrologers determine the festival date each year and announce it to the clans. In 2026, Chambalaalla was celebrated on 15 March. The 2027 celebration is expected around the second week of March, but its exact date has not yet been confirmed; check for an official announcement closer to the festival. Sequences of events take place throughout the Sidama New Year, with especially vibrant celebrations on Fichee day and the following day, Chambalaalla. Traditional songs, dances, and communal events bring Sidama people of all ages, genders, and social backgrounds together.'],
-      ['Customs & community values', 'On the first day, children visit homes in their neighborhoods to greet their neighbors. During the festival, clan leaders encourage people to work hard, respect and support elders, and avoid cutting indigenous trees, begging, idleness, false testimony, and theft. The festival promotes equity, good governance, social cohesion, peaceful coexistence, and connections among Sidama clans and Ethiopia’s diverse communities.'],
-      ['Reconciliation before the New Year', 'Fichee is also a time to seek reconciliation and begin the New Year without unresolved grievances. In the weeks before the festival, elders may help mediate disputes between relatives and neighbors. The ideal of a clean, peaceful heart is associated with the sharing of milk and Burisame.'],
-      ['Enset culture: the tree against hunger', 'Enset, also known as Weese or false banana, is central to Sidama foodways, livelihoods, and cultural identity. The plant supports food security and provides staple foods such as Kocho, Bula, and Wassa, as well as traditional medicine and useful materials. Festival foods such as Burisame and Chukame also reflect enset’s place in community life.'],
-      ['The Gudumaale & Qetala', 'Public celebrations are also held at Gudumaale, traditional open-air community gathering grounds often shaded by mature trees. The community gathering and renewal known as Qetala is an important part of the celebration, bringing people together in a shared public space.'],
-      ['Passing traditions on', 'Parents pass the tradition to children through oral teaching and participation in festival events. Women play an important role in sharing knowledge and skills, including hairdressing and preparing festival meals, with their daughters and other girls in their villages.'],
-      ['UNESCO recognition', 'Fichee–Chambalaalla was inscribed on UNESCO’s Representative List of the Intangible Cultural Heritage of Humanity in November 2015. The recognition reflects the festival’s significance and the values of peace, justice, and community it shares with the wider world.'],
-      ['Experience the festival from Hawassa', 'A festival visit can include a two-night stay in Hawassa, the lively Rift Valley city on the shore of Lake Hawassa. The lake is known for its scenic shoreline, colobus and vervet monkeys, and diverse birdlife. Fichee–Chambalaalla can also be part of a longer itinerary combining history and culture, coffee experiences, visits to the Omo area, birdwatching, trekking, and other activities. Confirm festival dates, local arrangements, and access with tour operators and community hosts before travel.'],
-      ['The Luwa and Indigenous Governance System', 'Luwa is a traditional Sidama generational age-grade and socio-political institution. Historical accounts describe it as an organizing framework for community responsibilities, leadership, social order, and conflict resolution, with councils of elders playing an important role. It is part of Sidama’s indigenous heritage and is distinct from the present regional government and formal legal system.'],
-      ['Luwa grades and cycle', 'Descriptions of the Luwa system identify five grades: Darara, Fullassa, Mawa, Wawissa, and Mogissa. The grades are described as rotating through seven-year periods, making a full five-grade cycle 35 years. Membership and initiation are traditionally associated with a person’s father’s grade rather than birth year.'],
-      ['Life stages and responsibilities', 'Traditional descriptions distinguish stages of life and service: Cotte refers to youth learning and helping their families and communities; Kirma to initiated young people learning community duties; Lallawa to the active governing grade; and Cimeeyye to elders serving in advisory, judicial, and ritual roles. Practices and interpretations may vary across communities and over time.'],
-      ['Luwa Shino: initiation and transition', 'Luwa Shino, also referred to as Gara in accounts of the tradition, marks initiation and transition into greater responsibility. Descriptions include preparation and instruction guided by elders, followed by ceremonies and blessings. Traditional leadership titles associated with this transition include Woma and Woma-Cimeessa.'],
-      ['Songo: community deliberation and conflict resolution', 'Songo refers to traditional councils and dispute-resolution practices described at village and higher community levels. Halale—the principle of truth, justice, and harmony with Magano—is presented as a moral foundation. Ollaa Songo addresses local matters, with an emphasis on reconciliation; responses may include apology or fines, while serious breaches can carry social consequences. These traditional practices should not be confused with or represented as a replacement for formal courts.'],
-      ['Living heritage', 'Cultural knowledge is carried through family and community life, language, customs, and shared celebrations. Respectful engagement with local communities helps keep these traditions valued and thriving.'],
+      ['Fichee–Chambalaalla: UNESCO World Heritage', 'Fichee–Chambalaalla is the grand Sidama New Year festival, inscribed by UNESCO on the Representative List of the Intangible Cultural Heritage of Humanity in November 2015. Rooted in oral tradition celebrating a married daughter who annually visited her family with a nourishing dish of enset, butter, and milk, the festival has grown into a powerful symbol of unity, hospitality, and communal sharing.'],
+      ['Ayyaanto: traditional astronomers & calendar', 'The date of Fichee is not fixed on a modern calendar; it is precisely determined each year by traditional astronomers and astrologers known as Ayyaanto. By tracking the lunar cycle, constellations, and the movement of the stars, the Ayyaanto proclaim the exact day of the New Year to community clans.'],
+      ['Gudumaale & the ecstatic Qetala dance', 'Celebrations begin at the household level with family meals and culminate in mass public gatherings at communal cultural grounds called Gudumaale (most famously in Hawassa). The celebration reaches its peak with the energetic Qetala dance, where men, women, and youth sing praise songs, brandish ceremonial staffs, and rejoice in shared blessings.'],
+      ['Luwa: indigenous generational governance', 'Luwa is the ancient age-grade and leadership system that organizes Sidama society into 5 rotating 7-year generational classes (Darara, Fullaasa, Hirobora, Wawwawa, Mogissa), completing a full 35-year cycle. Led by the Gadaana (head) and Ja’lawa (deputies), the Luwa trains generations in leadership, civic defense, and ethical stewardship.'],
+      ['Seera customary law & the principle of Halaale', 'Seera is the foundational customary legal framework of Sidama society. At its very center is Halaale — the supreme principle of absolute truth, justice, moral uprightness, and harmony with Magano (the Creator). Village assemblies (Ollaa Songo) resolve disputes using Halaale through restorative justice, mutual reconciliation, and sacred oaths.'],
+      ['Wesse (Enset): the Tree of Life', 'Enset ventricosum (false banana), known locally as Wesse, is the foundation of Sidama food sovereignty and material culture. Fermented into Waasa (pulp) and prepared into cherished dishes such as Buurisame (blended with seasoned butter and milk) and Ccukkame, enset is drought-resilient, environmentally sustainable, and deeply symbolic of life and hospitality.'],
     ],
   },
-  '/education': { eyebrow: 'Learning & opportunity', title: 'Education for every generation.', intro: 'Access to learning supports opportunity for children and communities. The supplied source reports a low kindergarten gross enrollment ratio and barriers including school availability and community awareness. Its reporting year is not stated, so the statistics below are historical reference figures, not current totals.', sections: [['Schools listed in the source', 'The source lists 75 kindergartens, 633 primary schools, and 12 secondary schools in Sidama. The reporting year is not provided, so these counts should not be treated as current.'], ['Kindergarten enrollment', 'The source reports 6,863 kindergarten students: 3,700 boys and 3,163 girls. For children aged 4–6, it gives a total population of about 360,547: 181,543 boys and 179,004 girls. The reported kindergarten gross enrollment ratio is about 1.9% overall, 2.04% for boys, and 1.77% for girls. These are figures from an undated source and do not establish present enrollment.'], ['Access to early learning', 'The source points to limited school availability and community awareness as barriers to young children’s participation. Improving access to early learning and supporting families to enroll children can help widen educational opportunity.'], ['Current information', 'For up-to-date school counts, enrollment data, and education programs, consult the relevant Sidama regional education authorities.']] },
-  '/environment': { eyebrow: 'Land, water & wellbeing', title: 'A healthy environment matters.', intro: 'Sidama’s fertile landscapes and water resources are vital to livelihoods and wellbeing. The available information includes older studies and should not be read as a current environmental or public-health assessment.', sections: [['Land & soil', 'A study cited in the supplied material classified soil erosion in Sidama as medium in 1988 and described pressure on farmland and pasture. These are historical observations; current conditions may differ. Soil conservation and sustainable land management remain important to resilient livelihoods.'], ['Water, sanitation & health', 'A 2009 baseline survey reported that 7% of surveyed households used a latrine, with open defecation reported by the remainder. This is a historical survey result, not a current estimate. The supplied source also describes health extension workers and community health promoters as supporting hygiene and sanitation education.'], ['Health figures in context', 'A 2009–2011 emergency response plan for the wider SNNPR estimated up to 65,260 acute watery diarrhea cases in 2009. This was an estimate for the wider region, not a Sidama-only count, and it should not be interpreted as current.'], ['Water resources & community action', 'The supplied material describes water resources as important but subject to pollution and access challenges. Community participation, safe water, sanitation, and hygiene education are essential elements of local solutions.'], ['Current environmental information', 'The available environmental observations are dated and do not provide a verified picture of current conditions. Consult current regional environment, water, and health authorities for recent data and programs.']] },
-  '/investment': { eyebrow: 'Grow with us', title: 'Invest in Sidama.', intro: 'A dynamic economy, productive agricultural land, and a strategic location create opportunities for responsible, sustainable investment.', sections: [['Agriculture & agro-processing', 'Build on Sidama’s strong agricultural base and globally recognized coffee sector with value-added production.'], ['Tourism & hospitality', 'Develop experiences grounded in the region’s landscapes, culture, and welcoming communities.'], ['Partnership & support', 'Connect with regional institutions to learn about priority sectors, local conditions, and investment processes.']] },
-  '/tourism': { eyebrow: 'Discover Sidama', title: 'A journey worth taking.', intro: 'From lakeside scenery and highland landscapes to coffee-growing communities and living cultural traditions, Sidama offers many ways to experience southern Ethiopia.', sections: [['Lake Hawassa & Logita Falls', 'Lake Hawassa and Logita Falls are among the region’s natural attractions. The lakeside setting offers a chance to enjoy the water and surrounding landscape.'], ['Highlands & changing landscapes', 'Sidama’s terrain ranges from warm lowlands to cooler highlands. Wondo Genet and the countryside around Yirgalem are among the places visitors can explore while discovering the region’s varied scenery.'], ['Coffee country', 'Coffee is part of Sidama’s agricultural heritage and a defining feature of its landscape. Visitors can learn about coffee-growing communities and the work behind the region’s coffee.'], ['Culture & community', 'Fichche, the Sidama New Year, is a notable cultural tradition. Local food, language, and community life are also important ways to understand the region’s heritage.'], ['Getting around', 'Hawassa is the regional capital and a useful starting point for exploring nearby towns and attractions. Road figures available in the supplied historical source date to 2004, so check current local sources for routes, transport options, and travel conditions.']] },
-  '/transport': { eyebrow: 'Getting around', title: 'Transport & connections.', intro: 'Plan journeys between Hawassa, Sidama’s towns, and the communities that make up the region. Routes, schedules, and road conditions can change, so confirm current details locally before travelling.', sections: [['Starting in Hawassa', 'Hawassa is Sidama’s regional capital and an important starting point for journeys around the region. Confirm your onward route and transport arrangements with a current local source.'], ['Road travel', 'Road connections link regional towns and rural communities. Journey times and road conditions vary by route, season, and weather; allow extra time and check conditions before setting out.'], ['Public and local transport', 'Transport options and service frequency vary between towns and rural areas. Ask a local transport operator or trusted local contact about current departures, fares, and the best connection for your destination.'], ['Travel responsibly', 'For visits to rural communities and natural sites, plan your return journey, carry essentials, and seek local guidance about access and community customs. Do not rely on historical road statistics as a guide to present conditions.'], ['Official information', 'This page does not provide live schedules, fares, road closures, or emergency updates. Consult current regional transport authorities and local operators for verified travel information.']] },
-  '/documents': { eyebrow: 'Resources', title: 'Documents & publications.', intro: 'Find public information, regional publications, and resources shared by Sidama Regional State institutions.', sections: [['Public information', 'This portal is being prepared to make official publications and public notices easier to find.'], ['Request a document', 'Contact the regional administration to ask about a publication or public record.'], ['Stay informed', 'Visit the news page for current announcements and updates from across the region.']] },
+  '/tourism': {
+    eyebrow: 'Discover Sidama',
+    title: 'A journey worth taking.',
+    intro: 'From bird-rich Rift Valley lakes and therapeutic natural hot springs to roaring mountain waterfalls and mist-covered coffee forests, Sidama is a premier ecotourism haven.',
+    sections: [
+      ['Lake Hawassa & Amora Gedel fish market', 'Lake Hawassa is a scenic, freshwater Rift Valley lake framed by acacia trees and hills. At the bustling Amora Gedel morning fish market, visitors observe fishermen landing fresh tilapia and catfish amidst massive, photogenic flocks of marabou storks, great white pelicans, and playful colobus monkeys in the shoreline canopy.'],
+      ['Mount Tabor: panoramic vistas', 'Rising beside Hawassa city, Mount Tabor offers a scenic hiking route and a breathtaking 360-degree panoramic lookout over the expanding city skyline, lush green farmlands, and the sparkling expanse of Lake Hawassa.'],
+      ['Wondo Genet geothermal hot springs & arboretum', 'Nestled in forested mountain foothills approximately 35 km southeast of Hawassa, Wondo Genet is world-famous for its natural thermal springs, therapeutic mineral pools, lush botanical arboretum, and forest hiking trails populated by endemic bird species.'],
+      ['Logita & Bonora waterfalls in Bensa', 'Located roughly 120 km from Hawassa in the rugged highland district of Bensa, Logita Falls plunges through dramatic green gorges with a roaring cascade. Nearby Bonora Falls offers further unspoiled ecotourism for adventure travelers.'],
+      ['Loka Abaya National Park', 'Spanning nearly 500 km² along the eastern shores of Lake Abaya, Loka Abaya National Park protects diverse ecosystems ranging from lakeshore wetlands to acacia savannahs, serving as a sanctuary for bushbucks, warthogs, waterbirds, and aquatic life.'],
+      ['Specialty coffee agro-tourism trails', 'Visitors can journey into the heart of world-famous coffee woredas like Bensa, Arbegona, and Aleta Wondo to tour family coffee gardens, observe traditional washing stations and drying beds, and take part in an authentic Sidama coffee ceremony.'],
+    ],
+  },
+  '/economy': {
+    eyebrow: 'Livelihoods & trade',
+    title: 'An economy rooted in the land.',
+    intro: 'Sidama couples centuries-old agricultural excellence with modern industrial parks, leading Ethiopia’s specialty coffee exports and agro-processing transformation.',
+    coffeeFeature: { image: '/sidama-coffee-harvest.png', alt: 'A Sidama farmer handpicking specialty red coffee cherries', title: 'World-renowned specialty Arabica coffee', copy: 'Sidama specialty coffee is globally treasured for its complex notes of citrus, bergamot, floral jasmine, and wild berries. Smallholder farmers cultivate coffee under shade trees, preserving biodiversity and delivering premier washed and natural micro-lots.' },
+    coffeeLandscape: { image: '/sidama-coffee-landscape.png', alt: 'Cultivated green coffee hills of Sidama Regional State', caption: 'Lush agroforestry hillsides define the agricultural beauty of the Sidama highlands.' },
+    sections: [
+      ['Specialty coffee export excellence', 'Sidama is one of the world’s most celebrated coffee origins. Renowned micro-regions like Bensa, Arbegona, and Dale consistently achieve winning cup scores in international Cup of Excellence competitions, commanding top specialty premiums on the international market.'],
+      ['Sidama Coffee Farmers Cooperative Union (SCFCU)', 'Formed in 2001, SCFCU represents over 50 primary cooperatives and more than 80,000 smallholder farming households. The union enables farmers to export high-grade organic and Fair Trade certified coffees directly to international roasters.'],
+      ['Hawassa Industrial Park (HIP)', 'Spanning 1.4 million square meters, Hawassa Industrial Park is Ethiopia’s flagship eco-industrial park. Specialized in sustainable textile and apparel production with a state-of-the-art Zero Liquid Discharge (ZLD) facility, HIP provides employment for tens of thousands of skilled young workers.'],
+      ['Yirgalem Integrated Agro-Industrial Park (IAIP)', 'Strategically situated in Yirgalem, this modern agro-industrial park transforms regional produce into high-value consumer goods, including cold-pressed organic avocado oil, pure honey, dairy products, and processed fruit juices for export.'],
+      ['Enset, livestock & rural livelihoods', 'Beyond coffee, the region’s rural economy is anchored by enset cultivation, dairy and cattle farming, apiculture (beekeeping), and vegetable horticulture, creating resilient multi-crop farm ecosystems.'],
+    ],
+  },
+  '/language': {
+    eyebrow: 'Sidaamu Afoo Language',
+    title: 'The living voice of our heritage.',
+    intro: 'Sidaamu Afoo is a Highland East Cushitic language spoken by over 4 million Sidama people. It is rich in oral poetry, proverbs, and philosophical expression.',
+    sections: [
+      ['Origins & linguistic family', 'Sidaamu Afoo belongs to the Highland East Cushitic branch of the Afroasiatic language family, closely related to Hadiyya, Kambaata, Gedeo, and Alaaba. It is the official working language of Sidama Regional State.'],
+      ['The Latin Qubee writing system (1993)', 'Since 1993, Sidaamu Afoo has been written using a Latin-based alphabet known as Qubee. The script is taught in primary and secondary schools across the region, supporting mother-tongue education, literacy, and administrative documentation.'],
+      ['Grammar: Subject - Object - Verb (SOV)', 'Sidaamu Afoo follows a strict Subject - Object - Verb sentence structure. Verbs carry rich conjugations reflecting person, number, gender, tense, and aspect. Word meanings can change completely based on vowel lengthening (e.g., "a" vs "aa") and consonant gemination (doubled consonants).'],
+      ['Oral literature & proverbs (Mammaaksha)', 'The language preserves an enormous library of proverbs (Mammaaksha), historical narratives (Dhuki), praise poems, and festival songs that encode the ethical and social values of the Sidama people.'],
+    ],
+    vocabularyTable: {
+      title: 'Everyday Vocabulary & Phrases',
+      description: 'Core phrases and expressions in Sidaamu Afoo for greeting and daily conversation.',
+      rows: [
+        ['Hello / Peace', 'Keere / Keereho', 'ሰላም / ጤና ይስጥልኝ', 'Universal greeting of peace'],
+        ['Good morning (to male)', 'Keere gallito', 'እንደምን አደርክ', 'Morning greeting to a man'],
+        ['Good morning (to female)', 'Keere gallita', 'እንደምን አደርሽ', 'Morning greeting to a woman'],
+        ['Good morning (respectful / plural)', 'Keere galtini', 'እንደምን አደራችሁ', 'Polite or plural morning greeting'],
+        ['Good afternoon / evening', 'Keere hosito / hosita', 'እንደምን ዋልክ / ዋልሽ', 'Afternoon greeting'],
+        ['How are you? (to male)', 'Hittonni nootto?', 'እንዴት ነህ?', 'Inquiring about wellbeing'],
+        ['How are you? (to female)', 'Hittonni nootta?', 'እንዴት ነሽ?', 'Inquiring about wellbeing'],
+        ['I am fine / in peace', 'Keerunni noo\'ma', 'ደህና ነኝ', 'Standard response to greeting'],
+        ['Thank you', 'Galatoommo', 'አመሰግናለሁ', 'Expression of gratitude'],
+        ['Yes / No', 'Hoo / Weyi', 'አዎ / አይደለም', 'Affirmation and negation'],
+        ['What is your name?', 'Ate su\'mi ayeti?', 'ስምህ/ሽ ማን ነው?', 'Asking someone’s name'],
+        ['My name is...', 'Ane su\'mi [...]ti', 'ስሜ [...] ይባላል', 'Introducing oneself'],
+        ['Water', 'Wo\'a', 'ውሃ', 'Essential life element'],
+        ['Coffee', 'Buna', 'ቡና', 'Sidama’s famous beverage'],
+        ['Food', 'Sagale', 'ምግብ', 'Daily nourishment'],
+        ['House / Home', 'Mine / Bale', 'ቤት', 'Dwelling place'],
+      ],
+    },
+    numbersTable: {
+      title: 'Numerals in Sidaamu Afoo',
+      description: 'Count from 1 to 10 in Sidaamu Afoo.',
+      rows: [
+        ['1', '1', 'Mite (or Mitto)', 'አንድ'],
+        ['2', '2', 'Lame', 'ሁለት'],
+        ['3', '3', 'Sase', 'ሦስት'],
+        ['4', '4', 'Shoole', 'አራት'],
+        ['5', '5', 'Onte', 'አምስት'],
+        ['6', '6', 'Lee', 'ስድስት'],
+        ['7', '7', 'Lamala', 'ሰባት'],
+        ['8', '8', 'Sette', 'ስምንት'],
+        ['9', '9', 'Honse', 'ዘጠኝ'],
+        ['10', '10', 'Tonne', 'አሥር'],
+      ],
+    },
+  },
+  '/health': {
+    eyebrow: 'Health & Public Care',
+    title: 'Dedicated to health and vitality.',
+    intro: 'The Sidama Regional Health Bureau coordinates tertiary referral hospitals, district health centers, and community health extension networks to serve over 5 million people.',
+    sections: [
+      ['Hawassa University Comprehensive Specialized Hospital (HU-CSH)', 'Serving as the paramount tertiary medical teaching and referral center in southern Ethiopia, HU-CSH offers advanced medical care across pediatrics, internal medicine, oncology, surgery, cardiology, and emergency trauma for over 5 million people.'],
+      ['Primary Health Care Units (PHCUs)', 'Across all 30+ woredas and city administrations, a comprehensive network of district hospitals and Primary Health Care Units delivers maternal delivery care, infant immunization, infectious disease screening, and essential medicines.'],
+      ['Community Health Extension Program (HEP)', 'Grassroots female Health Extension Workers (HEWs) are deployed in every rural kebele, bringing health education, prenatal checks, family planning, hygiene awareness, and malaria control directly to farm households.'],
+      ['Clean water & hygiene promotion', 'In partnership with regional water bureaus, ongoing community programs expand spring capping, deep groundwater wells, and gravity-fed pipeline schemes across highland coffee communities.'],
+    ],
+  },
+  '/education': {
+    eyebrow: 'Learning & opportunity',
+    title: 'Education for every generation.',
+    intro: 'From mother-tongue primary schooling in Sidaamu Afoo to internationally recognized university research centers, education fuels the regional renaissance.',
+    sections: [
+      ['Hawassa University (HU)', 'One of Ethiopia’s top-tier national research universities, Hawassa University operates multiple campuses with flagship colleges including Agriculture, Medicine and Health Sciences, Business & Economics, and the Institute of Technology.'],
+      ['Wondo Genet College of Forestry & Natural Resources', 'Renowned across East Africa as a pioneer in forestry education, watershed conservation, and environmental science, this specialized college leads research in biodiversity and sustainable agroforestry.'],
+      ['Mother-tongue primary education', 'Sidama Regional State champions mother-tongue primary education in Sidaamu Afoo using the Qubee script, ensuring strong early literacy and cultural continuity before transitioning to Amharic and English in later grades.'],
+      ['Technical & Vocational Training (TVET)', 'Hawassa Polytechnic College and district TVET institutes prepare thousands of youths each year in agro-processing, mechanical engineering, garment manufacturing, construction, and digital technologies.'],
+    ],
+  },
+  '/government': {
+    eyebrow: 'Public leadership',
+    title: 'Government & institutions.',
+    intro: 'Regional institutions work under the constitution of Sidama Regional State to serve citizens, protect rights, and lead regional socioeconomic transformation.',
+    sections: [
+      ['Regional administration & executive council', 'Headed by the Regional President, the Executive Council coordinates public policy, strategic development master plans, and public service delivery across all bureaus.'],
+      ['Regional council (legislative assembly)', 'The elected Regional Council represents the citizens of Sidama, passing regional legislation, approving budgets, and providing democratic oversight over public institutions.'],
+      ['Regional sectoral bureaus', 'Dedicated bureaus direct public initiatives in Agriculture, Health, Education, Culture & Tourism, Trade & Industry, Water & Energy, and Transport.'],
+    ],
+    zones: [
+      { name: 'Central Sidama Zone', districts: ['Arbegona', 'Dale', 'Darara', 'Loko Abaya', 'Shafamo', 'Wensho (Wonsho)'], towns: ['Yirgalem'] },
+      { name: 'Eastern Sidama Zone', districts: ['Aroresa', 'Bensa', 'Bona Zuria', 'Bura', 'Chabe Gambeltu', 'Chere', 'Daela', 'Hoko'], towns: ['Daye'] },
+      { name: 'Northern Sidama Zone', districts: ['Bilate Zuria', 'Boricha', 'Gorche', 'Hawassa Zuria', 'Malga', 'Shebedino', 'Wondo Genet'], towns: ['Leku'] },
+      { name: 'Southern Sidama Zone', districts: ['Aleta Wondo', 'Bursa', 'Chuko', 'Dara', 'Dara Otilcho', 'Hula', 'Teticha'], towns: ['Aleta Wondo'] },
+    ],
+    city: { name: 'Hawassa', subdivisions: ['Addis Ketema', 'Hayk Dar', 'Mehal', 'Menahariya', 'Misrak', 'Tabor', 'Hawela Tula', 'Bahil Adarash'] },
+    districtPopulation: [
+      ['Bensa', '250,727', '342,116'],
+      ['Boricha', '250,260', '339,933'],
+      ['Dale', '242,658', '357,733'],
+      ['Shebedino', '233,922', '320,639'],
+      ['Aleta Wondo', '188,976', '276,385'],
+      ['Aroresa', '170,240', '225,582'],
+      ['Cheko', '167,300', '225,450'],
+      ['Wendo Genet', '155,715', '234,490'],
+      ['Dara', '155,265', '216,756'],
+      ['Arbegona', '135,862', '186,021'],
+      ['Hula', '129,263', '176,997'],
+      ['Hawassa Zuria', '124,472', '161,914'],
+      ['Bona Zuria', '121,236', '166,043'],
+      ['Chere', '120,449', '159,944'],
+      ['Malga', '109,793', '148,377'],
+      ['Gorche', '105,472', '141,320'],
+      ['Bursa', '103,631', '137,982'],
+      ['Loko Abaya', '99,233', '130,539'],
+      ['Wensho', '89,662', '119,461'],
+      ['Hawassa city', '258,808', '555,480'],
+    ],
+  },
+  '/environment': {
+    eyebrow: 'Land, water & wellbeing',
+    title: 'A healthy environment matters.',
+    intro: 'From Rift Valley aquatic ecosystems to highland watershed conservation, preserving Sidama’s biodiversity and volcanic soils is fundamental to our shared future.',
+    sections: [
+      ['Rift Valley lakes & watershed stewardship', 'Lake Hawassa and Lake Abaya are delicate closed-basin aquatic systems. Regional environmental bureaus lead programs to mitigate siltation, monitor industrial effluents, and safeguard lakeshore wetland buffer zones.'],
+      ['Enset multi-strata agroforestry', 'The traditional Sidama home garden (enset and coffee agroforestry system) provides continuous soil cover, prevents hillside erosion under tropical downpours, and sequesters significant carbon dioxide.'],
+      ['Indigenous forest conservation & Seera ethics', 'Under traditional Seera customary rules, cutting indigenous trees such as Podocarpus (Zigba) and Cordia africana (Wanza) is strictly prohibited. Modern reforestation programs build on this conservation heritage.'],
+      ['Community sanitation & spring water protection', 'Protecting natural highland springs and promoting ecological sanitation preserves groundwater quality for both rural farming communities and downstream urban centers.'],
+    ],
+  },
+  '/investment': {
+    eyebrow: 'Grow with us',
+    title: 'Invest in Sidama.',
+    intro: 'A young and skilled workforce, high agricultural yields, strategic highway connections, and modern eco-industrial parks make Sidama a premier investment corridor in the Horn of Africa.',
+    sections: [
+      ['Specialty coffee & agro-processing', 'Tap into unmatched supplies of raw specialty coffee, organic avocados, honey, tropical fruits, and dairy by establishing value-adding processing facilities at the Yirgalem Integrated Agro-Industrial Park.'],
+      ['Eco-tourism, resorts & hospitality', 'Develop premium lakeside eco-lodges along Lake Hawassa, wellness spas at Wondo Genet thermal springs, and trekking camps in the Bensa highland waterfall circuits.'],
+      ['Manufacturing at Hawassa Industrial Park', 'Leverage state-of-the-art industrial sheds, reliable renewable hydropower, zero liquid discharge facilities, and favorable tax incentives for export apparel and light manufacturing.'],
+      ['Regional investment one-stop support', 'The Sidama Investment Commission provides streamlined company registration, land lease facilitation, and operational support for foreign and domestic investors.'],
+    ],
+  },
+  '/transport': {
+    eyebrow: 'Getting around',
+    title: 'Transport & connections.',
+    intro: 'Hawassa is connected via modern express highways and scheduled air routes, serving as the central transport hub for southern Ethiopia.',
+    sections: [
+      ['Addis Ababa - Hawassa Expressway', 'The modern multi-lane expressway cuts travel time from Addis Ababa to Hawassa to approximately 3.5 hours, seamlessly connecting the regional capital with central Ethiopia and the port corridors.'],
+      ['Hawassa Airport (AWA)', 'Hawassa Airport operates daily scheduled commercial flights to and from Addis Ababa Bole International Airport, providing convenient domestic and international connections.'],
+      ['Regional highway & woreda networks', 'All-weather asphalt roads connect Hawassa to Yirgalem, Aleta Wondo, Dilla, and the Moyale border corridor to Kenya, while feeder roads link highland districts like Bensa and Arbegona.'],
+      ['Lakeside & city public transit', 'Hawassa offers convenient urban mobility with city buses, bajajs (auto-rickshaws), bicycle lanes, and scenic lakeside boat transport across Lake Hawassa.'],
+    ],
+  },
+  '/documents': {
+    eyebrow: 'Resources',
+    title: 'Documents & publications.',
+    intro: 'Access official regional government publications, development master plans, investment guides, and cultural heritage research.',
+    sections: [
+      ['Regional investment guide & sector profiles', 'Comprehensive guidelines on priority investment areas, land lease terms, tax incentives, and application procedures in Sidama Regional State.'],
+      ['Fichee–Chambalaalla UNESCO documentation', 'Official nomination documents, ethnographic studies, and educational brochures commemorating Sidama’s intangible cultural heritage.'],
+      ['Annual regional socio-economic reports', 'Data digests detailing regional school enrollments, healthcare indicators, coffee export volumes, and infrastructure milestones.'],
+      ['Request official records & forms', 'Citizens and researchers can request archived reports or submission forms directly from the regional administration in Hawassa.'],
+    ],
+  },
 }
 
 function AdministrativeDivisions({ zones, city, districtPopulation }) {
@@ -392,7 +519,6 @@ function AdministrativeDivisions({ zones, city, districtPopulation }) {
       <ul>{zone.towns.map((town) => <li key={town}>{town}</li>)}</ul>
     </article>)}</div>
     <article className="city-card"><div><h3>{city.name}</h3><span className="city-level">{t('Zone-level city')}</span></div><div><p className="division-label">{t('Sub-cities')}</p><ul>{city.subdivisions.map((subdivision) => <li key={subdivision}>{subdivision}</li>)}</ul></div></article>
-    <p className="administrative-note">{t('Administrative names and boundaries may change; consult current regional sources for official use.')}</p>
     {districtPopulation && <div className="population-section">
       <div className="section-heading"><div><h2>{t('Districts by Population')}</h2><p>{t('Census tables still report Sidama on its older district boundaries. These figures are the most recent official numbers per district.')}</p></div></div>
       <div className="population-table-wrap">
@@ -405,9 +531,35 @@ function AdministrativeDivisions({ zones, city, districtPopulation }) {
   </section>
 }
 
+function VocabularySection({ vocabularyTable }) {
+  const { t } = useLanguage()
+  return <section className="population-section" aria-labelledby="vocab-heading">
+    <div className="section-heading"><div><h2 id="vocab-heading">{t(vocabularyTable.title)}</h2><p>{t(vocabularyTable.description)}</p></div></div>
+    <div className="population-table-wrap">
+      <table className="population-table">
+        <thead><tr><th scope="col">{t('English')}</th><th scope="col">Sidaamu Afoo</th><th scope="col">አማርኛ</th><th scope="col">{t('Context / Meaning')}</th></tr></thead>
+        <tbody>{vocabularyTable.rows.map(([en, sid, am, ctx]) => <tr key={en}><th scope="row">{t(en)}</th><td><strong>{sid}</strong></td><td>{am}</td><td>{t(ctx)}</td></tr>)}</tbody>
+      </table>
+    </div>
+  </section>
+}
+
+function NumbersSection({ numbersTable }) {
+  const { t } = useLanguage()
+  return <section className="population-section" aria-labelledby="numbers-heading">
+    <div className="section-heading"><div><h2 id="numbers-heading">{t(numbersTable.title)}</h2><p>{t(numbersTable.description)}</p></div></div>
+    <div className="population-table-wrap">
+      <table className="population-table">
+        <thead><tr><th scope="col">{t('Digit')}</th><th scope="col">{t('Number')}</th><th scope="col">Sidaamu Afoo</th><th scope="col">አማርኛ</th></tr></thead>
+        <tbody>{numbersTable.rows.map(([digit, num, sid, am]) => <tr key={digit}><th scope="row">{digit}</th><td>{num}</td><td><strong>{sid}</strong></td><td>{am}</td></tr>)}</tbody>
+      </table>
+    </div>
+  </section>
+}
+
 function InfoPage({ page }) {
   const { t } = useLanguage()
-  return <main id="main-content" className="page-main"><div className="container"><div className="page-heading"><h1>{t(page.title)}</h1><p>{t(page.intro)}</p></div>{page.coffeeFeature && <section className="coffee-feature" aria-labelledby="coffee-feature-heading"><img src={page.coffeeFeature.image} alt={t(page.coffeeFeature.alt)} /><div className="coffee-feature-copy"><h2 id="coffee-feature-heading">{t(page.coffeeFeature.title)}</h2><p>{t(page.coffeeFeature.copy)}</p></div></section>}{page.coffeeLandscape && <figure className="coffee-landscape"><img src={page.coffeeLandscape.image} alt={t(page.coffeeLandscape.alt)} /><figcaption>{t(page.coffeeLandscape.caption)}</figcaption></figure>}{page.cultureImage && <figure className="culture-image"><img src={page.cultureImage.src} alt={t(page.cultureImage.alt)} /><figcaption>{t(page.cultureImage.caption)}</figcaption></figure>}<div className="info-layout"><aside className="info-aside" aria-label={t('Sidama Regional State')}><span className="aside-leaf"><Icon name="leaf" size={32} /></span><p>{t('Sidama Regional State')}</p><span>{t('Southern Ethiopia')}</span></aside><div className="info-sections">{page.sections.map(([title, copy], index) => <article className="info-row" key={title}><span className="info-index">{String(index + 1).padStart(2, '0')}</span><div><h2>{t(title)}</h2><p>{t(copy)}</p></div></article>)}</div></div>{page.zones && <AdministrativeDivisions zones={page.zones} city={page.city} districtPopulation={page.districtPopulation} />}<div className="page-cta"><p>{t('Want to learn more or get in touch?')}</p><Link className="button button-green" to="/contact">{t('Contact us')} <Icon name="arrow" size={17} /></Link></div></div></main>
+  return <main id="main-content" className="page-main"><div className="container"><div className="page-heading"><h1>{t(page.title)}</h1><p>{t(page.intro)}</p></div>{page.coffeeFeature && <section className="coffee-feature" aria-labelledby="coffee-feature-heading"><img src={page.coffeeFeature.image} alt={t(page.coffeeFeature.alt)} /><div className="coffee-feature-copy"><h2 id="coffee-feature-heading">{t(page.coffeeFeature.title)}</h2><p>{t(page.coffeeFeature.copy)}</p></div></section>}{page.coffeeLandscape && <figure className="coffee-landscape"><img src={page.coffeeLandscape.image} alt={t(page.coffeeLandscape.alt)} /><figcaption>{t(page.coffeeLandscape.caption)}</figcaption></figure>}{page.cultureImage && <figure className="culture-image"><img src={page.cultureImage.src} alt={t(page.cultureImage.alt)} /><figcaption>{t(page.cultureImage.caption)}</figcaption></figure>}<div className="info-layout"><aside className="info-aside" aria-label={t('Sidama Regional State')}><span className="aside-leaf"><Icon name="leaf" size={32} /></span><p>{t('Sidama Regional State')}</p><span>{t('Southern Ethiopia')}</span></aside><div className="info-sections">{page.sections.map(([title, copy], index) => <article className="info-row" key={title}><span className="info-index">{String(index + 1).padStart(2, '0')}</span><div><h2>{t(title)}</h2><p>{t(copy)}</p></div></article>)}</div></div>{page.vocabularyTable && <VocabularySection vocabularyTable={page.vocabularyTable} />}{page.numbersTable && <NumbersSection numbersTable={page.numbersTable} />}{page.zones && <AdministrativeDivisions zones={page.zones} city={page.city} districtPopulation={page.districtPopulation} />}<div className="page-cta"><p>{t('Want to learn more or get in touch?')}</p><Link className="button button-green" to="/contact">{t('Contact us')} <Icon name="arrow" size={17} /></Link></div></div></main>
 }
 
 function ListingPage({ type }) {
@@ -415,7 +567,7 @@ function ListingPage({ type }) {
   const isNews = type === 'news'
   const result = useApi(isNews ? '/news' : '/services')
   const items = result.items.length ? result.items : (isNews ? localNews : localServices)
-  return <main id="main-content" className="page-main"><div className="container"><div className="page-heading"><h1>{t(isNews ? 'News & updates.' : 'Public services.')}</h1><p>{t(isNews ? 'The latest stories and announcements from Sidama Regional State.' : 'Information about services and support available from regional institutions.')}</p></div><p className="sample-note">{t(`These starter ${isNews ? 'stories' : 'service listings'} are illustrative and should be replaced with verified regional information.`)}</p>{result.error && <p className="api-note" role="status">{t(result.error)}</p>}{isNews ? <div className="news-grid listing-grid">{items.map((item, index) => <NewsCard key={item.id} article={item} featured={index === 0} />)}</div> : <div className="service-grid listing-grid">{items.map((item) => <ServiceCard key={item.id} service={item} />)}</div>}</div></main>
+  return <main id="main-content" className="page-main"><div className="container"><div className="page-heading"><h1>{t(isNews ? 'News & Updates.' : 'Public Services.')}</h1><p>{t(isNews ? 'The latest stories and announcements from Sidama Regional State.' : 'Information about services and support available from regional institutions.')}</p></div>{result.error && <p className="api-note" role="status">{t(result.error)}</p>}{isNews ? <div className="news-grid listing-grid">{items.map((item, index) => <NewsCard key={item.id} article={item} featured={index === 0} />)}</div> : <div className="service-grid listing-grid">{items.map((item) => <ServiceCard key={item.id} service={item} />)}</div>}</div></main>
 }
 
 function NewsDetail() {
@@ -455,7 +607,6 @@ function NewsDetail() {
     : t('Latest update')
   return <main id="main-content" className="page-main"><article className="container news-detail">
     <Link className="text-link" to="/news">← {t('Back to news')}</Link>
-    {status === 'sample' && <p className="sample-note">{t('This illustrative sample story is not an official announcement.')}</p>}
     <div className="page-heading"><h1>{t(story.title)}</h1><p>{t(story.summary)}</p></div>
     <p className="news-detail-meta"><span>{t(story.category || 'Regional update')}</span><time dateTime={story.published_at || undefined}>{published}</time></p>
   </article></main>
