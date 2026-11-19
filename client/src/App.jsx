@@ -94,6 +94,14 @@ const translations = {
     'Count from 1 to 10 in Sidaamu Afoo.': 'በሲዳሙ አፎ ከ1 እስከ 10 ይቁጠሩ።',
     'Number': 'ቁጥር', 'Digit': 'አሃዝ',
     'The Great 5 Adventures of Sidama': 'የሲዳማ ታላላቅ 5 ጉዞዎች',
+    'The Great Adventures of Sidama': 'የሲዳማ ታላላቅ ጉዞዎች',
+    'Highest Peak in Sidama': 'የሲዳማ ከፍተኛው ተራራ',
+    'River & Canyon Expedition': 'የወንዝ እና ገደላማ ሸለቆ ጉዞ',
+    'Mount Garamba Alpine Trek (Arbegona)': 'የጋራምባ ተራራ የእግር ጉዞ (አርበጎና)',
+    'Genale River Canyon & Rapids (Aroresa & Bensa)': 'የገናሌ ወንዝ ሸለቆና ፈጣን ፍሰት (አሮሬሳና ቤንሳ)',
+    'Mount Garamba: alpine roof of Sidama (Arbegona)': 'ጋራምባ ተራራ፡ የሲዳማ ደጋማ ጣሪያ (አርበጎና)',
+    'Genale River canyon & gorges (Aroresa & Bensa)': 'የገናሌ ወንዝ ሸለቆና ገደሎች (አሮሬሳና ቤንሳ)',
+    'Geography: from Rift Valley to Mount Garamba': 'መልክዓ-ምድር፡ ከስምጥ ሸለቆ እስከ ጋራምባ ተራራ',
     'Unforgettable regional wonders from Rift Valley lakes to cloud coffee peaks.': 'ከስምጥ ሸለቆ ሐይቆች እስከ ደመናማ የቡና ተራሮች ድረስ የማይረሱ ድንቆች።',
     'Explore all adventures': 'ሁሉንም ጉዞዎች ይመልከቱ',
     'Elevation': 'ከፍታ', 'Distance': 'ርቀት', 'Best Season': 'ተስማሚ ወቅት',
@@ -159,6 +167,14 @@ const translations = {
     'Count from 1 to 10 in Sidaamu Afoo.': 'Sidaamu Afoo garinni 1 geeshsha 10 kiiri.',
     'Number': 'Kiiro', 'Digit': 'Kiiro Malaate',
     'The Great 5 Adventures of Sidama': 'Sidamu 5 Gedaano Ha’rooshsho',
+    'The Great Adventures of Sidama': 'Sidamu Gedaano Ha’rooshsho',
+    'Highest Peak in Sidama': 'Sidamu Roore Ilata',
+    'River & Canyon Expedition': 'Wo’u nna Giwa Ha’rooshsho',
+    'Mount Garamba Alpine Trek (Arbegona)': 'Garamba Ilata Ha’rooshsho (Arbegona)',
+    'Genale River Canyon & Rapids (Aroresa & Bensa)': 'Genale Wo’a Gari Darga (Aroresa nna Bensa)',
+    'Mount Garamba: alpine roof of Sidama (Arbegona)': 'Garamba Ilata: Sidamu Roore Ilata (Arbegona)',
+    'Genale River canyon & gorges (Aroresa & Bensa)': 'Genale Wo’a Gari Darga (Aroresa nna Bensa)',
+    'Geography: from Rift Valley to Mount Garamba': 'Umu gara: Rift Valley ka’e Garamba Ilata geeshsha',
     'Unforgettable regional wonders from Rift Valley lakes to cloud coffee peaks.': 'Rift Valley baaleeti ka’e buna dandiino ilatanna woyite.',
     'Explore all adventures': 'Baalunku ha’rooshsho leellishshe',
     'Elevation': 'Keeraancho', 'Distance': 'Xeertinye', 'Best Season': 'Dancha Woyite',
@@ -243,6 +259,28 @@ const greatAdventures = [
     distance: '70 km from Hawassa',
     season: 'Oct – April',
     image: '/loka-abaya.jpg',
+    link: '/tourism',
+  },
+  {
+    id: 'garamba',
+    badge: 'Highest Peak in Sidama',
+    elevation: '3,368 m',
+    title: 'Mount Garamba Alpine Trek (Arbegona)',
+    description: 'The "Water Tower of Sidama" and highest summit. Trek through afro-alpine moorlands, giant lobelias, and highland bamboo forests with 360-degree vistas stretching toward the Bale Mountains.',
+    distance: 'Arbegona Woreda',
+    season: 'Oct – March',
+    image: '/garamba-mountain.jpg',
+    link: '/tourism',
+  },
+  {
+    id: 'genale-river',
+    badge: 'River & Canyon Expedition',
+    elevation: '1,450 m',
+    title: 'Genale River Canyon & Rapids (Aroresa & Bensa)',
+    description: 'A mighty river carving sheer volcanic basalt canyons through eastern Sidama. Fed by roaring tributaries like Logita Falls, offering pristine whitewater, canyon trekking, and untouched riparian biodiversity.',
+    distance: 'Aroresa & Bensa Woredas',
+    season: 'Nov – May',
+    image: '/genale-river.jpg',
     link: '/tourism',
   },
   {
@@ -449,14 +487,14 @@ function NewsCard({ article, featured = false }) {
   </article>
 }
 
-// Great 5 Adventures Grid Component (Utah inspired)
+// Great Adventures Grid Component (Utah inspired)
 function AdventuresSection({ isStandalone = false }) {
   const { t } = useLanguage()
   return <section className="adventures-section" aria-labelledby="adventures-heading">
     <div className="container">
       <SectionHeading
         id="adventures-heading"
-        title="The Great 5 Adventures of Sidama"
+        title="The Great Adventures of Sidama"
         description="Unforgettable regional wonders from Rift Valley lakes to cloud coffee peaks."
         link={isStandalone ? undefined : "Explore all adventures"}
         to="/tourism"
@@ -576,7 +614,7 @@ const pages = {
       ['A sovereign people & ancient heritage', 'The Sidama people belong to the Highland East Cushitic group and have inhabited the fertile lands between Lake Hawassa, Lake Abaya, and the Bilate River basin for centuries. Historically, Sidama society flourished through indigenous democratic institutions such as the Luwa generational system and the moral law of Seera.'],
       ['Historic referendum & statehood (2020)', 'Following decades of community aspiration, a historic regional referendum was held on 20 November 2019, where 98.52% of voters decisively chose autonomous statehood. Sidama officially became the 10th Regional State of the Federal Democratic Republic of Ethiopia on 18 June 2020.'],
       ['Hawassa: the regional capital', 'Hawassa (Awassa) is the administrative capital, economic motor, and cultural melting pot of the region. Located on the scenic shores of Lake Hawassa at 1,708 meters altitude, it is widely celebrated for its clean boulevards, resort hospitality, higher education institutions, and the Hawassa Industrial Park.'],
-      ['Geography: from Rift Valley to alpine peaks', 'Sidama’s topography ranges from warm, semi-arid lowlands near Lake Abaya (1,100 m) to cool alpine highlands exceeding 3,000 meters in Arbegona, Hula, and Bensa (such as Mount Garamba). This varied geography creates abundant rainfall, fertile volcanic soil, and ideal microclimates for world-class specialty coffee and enset cultivation.'],
+      ['Geography: from Rift Valley to Mount Garamba', 'Sidama’s topography ranges from warm, semi-arid lowlands near Lake Abaya (1,100 m) to the afro-alpine summit of Mount Garamba in Arbegona woreda (3,368 m), the highest peak and water tower of the region. The landscape is bordered by Lake Hawassa and the Bilate River to the west, and carved by the deep volcanic gorges of the Genale River basin to the east and southeast through Aroresa, Bensa, and Chire woredas. This varied geography creates abundant rainfall, fertile volcanic soil, and ideal microclimates for world-class specialty coffee and enset cultivation.'],
       ['People, language & identity', 'Over 4 million people call Sidama home. The indigenous language, Sidaamu Afoo, is spoken as the mother tongue by the vast majority of residents and serves as the working language of the regional state, alongside Amharic and English.'],
       ['Towns & growth centers', 'Beyond Hawassa, vital urban and economic centers include Yirgalem (a historic administrative hub and agro-industrial center), Aleta Wondo, Wondo Genet, Daye (Bensa), Leku, Hula, Chuko, and Bona.'],
     ],
@@ -610,6 +648,8 @@ const pages = {
       ['Wondo Genet geothermal hot springs & arboretum', 'Nestled in forested mountain foothills approximately 35 km southeast of Hawassa, Wondo Genet is world-famous for its natural thermal springs, therapeutic mineral pools, lush botanical arboretum, and forest hiking trails populated by endemic bird species.'],
       ['Logita & Bonora waterfalls in Bensa', 'Located roughly 120 km from Hawassa in the rugged highland district of Bensa, Logita Falls plunges through dramatic green gorges with a roaring cascade. Nearby Bonora Falls offers further unspoiled ecotourism for adventure travelers.'],
       ['Loka Abaya National Park', 'Spanning nearly 500 km² along the eastern shores of Lake Abaya, Loka Abaya National Park protects diverse ecosystems ranging from lakeshore wetlands to acacia savannahs, serving as a sanctuary for bushbucks, warthogs, waterbirds, and aquatic life.'],
+      ['Mount Garamba: alpine roof of Sidama (Arbegona)', 'Towering at 3,368 meters above sea level in Arbegona woreda, Mount Garamba is the highest peak in Sidama Regional State. Revered as the "Water Tower of Sidama", it feeds the Genale, Gidabo, and Galana rivers. Hikers traverse afro-alpine meadows, giant lobelia forests, and highland bamboo groves, rewarded at the summit with sweeping 360-degree vistas extending to the Bale Mountains.'],
+      ['Genale River canyon & gorges (Aroresa & Bensa)', 'The mighty Genale River (Ganale Dorya) cuts through steep, dramatic volcanic gorges along Sidama’s eastern border with Oromia, passing through Aroresa, Bensa, and Chire woredas. Fed by roaring tributary cascades including Logita and Bonora falls, the river canyon offers thrilling whitewater expeditions, sheer basalt cliffs, and pristine riparian birdwatching corridors.'],
       ['Specialty coffee agro-tourism trails', 'Visitors can journey into the heart of world-famous coffee woredas like Bensa, Arbegona, and Aleta Wondo to tour family coffee gardens, observe traditional washing stations and drying beds, and take part in an authentic Sidama coffee ceremony.'],
     ],
   },

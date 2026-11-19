@@ -6,7 +6,7 @@ export const assistantKnowledge = [
     summary: 'Comprehensive overview of Sidama Regional State, its history, statehood referendum, capital, and geography.',
     content: `Sidama is the 10th autonomous Regional State of Ethiopia, officially established on 18 June 2020 following an overwhelming 98.52% majority vote in the historic November 2019 referendum. Hawassa (Awassa), located on the picturesque shores of Lake Hawassa in the Great Rift Valley, serves as the regional capital, administrative center, and economic hub.
 
-The region stretches from fertile Rift Valley lakeshores to cool green highlands (up to 3,000 meters above sea level). Geographically, it is bordered by Lake Hawassa, Lake Abaya, and the Bilate River basin. Sidama is divided into 4 administrative zones (Central, Eastern, Northern, Southern) and Hawassa City Administration, comprising over 30 woredas (districts) including Aleta Wondo, Bensa, Arbegona, Dale, Shebedino, Dara, Hula, and Wondo Genet.`,
+The region stretches from fertile Rift Valley lakeshores (1,100 m) to the cool alpine summit of Mount Garamba in Arbegona woreda (3,368 meters above sea level), the highest point and primary water tower of Sidama. Geographically, it is bordered by Lake Hawassa, Lake Abaya, the Bilate River basin to the west, and the dramatic volcanic gorges of the Genale River basin to the east and southeast, traversing woredas such as Aroresa, Bensa, and Chire. Sidama is divided into 4 administrative zones (Central, Eastern, Northern, Southern) and Hawassa City Administration, comprising over 30 woredas (districts) including Aleta Wondo, Bensa, Arbegona, Aroresa, Chire, Dale, Shebedino, Dara, Hula, and Wondo Genet.`,
   },
   {
     id: 'culture',
@@ -38,7 +38,11 @@ The region stretches from fertile Rift Valley lakeshores to cool green highlands
 
 4. Loka Abaya National Park: Covering approximately 500 square kilometers along the eastern shores of Lake Abaya. It protects acacia woodlands, riverine forests, and lakeshore wetlands home to bushbucks, warthogs, waterbirds, and aquatic biodiversity.
 
-5. Specialty Coffee Agro-Tourism: Tours through the world's most acclaimed coffee highlands in Bensa, Arbegona, and Aleta Wondo, exploring traditional coffee washing stations, garden coffee cultivation, and authentic Sidama coffee ceremonies.`,
+5. Mount Garamba (Arbegona Woreda): Rising to 3,368 meters, Mount Garamba is the highest peak in Sidama Regional State. Known as the "Water Tower of Sidama", its afro-alpine heights and bamboo forests feed major rivers including the Genale, Gidabo, and Galana. The summit offers panoramic 360-degree vistas extending to the Bale Mountains, while its slopes nurture championship Cup of Excellence specialty coffee.
+
+6. Genale River Gorges (Aroresa & Bensa Woredas): The powerful Genale River (Ganale Dorya) carves dramatic volcanic gorges and deep canyons through eastern Sidama woredas including Aroresa, Bensa, and Chire. Fed by the roaring Logita and Bonora waterfall tributaries, the river features pristine whitewater rapids, sheer basalt canyon cliffs, and rich riparian biodiversity.
+
+7. Specialty Coffee Agro-Tourism: Tours through the world's most acclaimed coffee highlands in Bensa, Arbegona, and Aleta Wondo, exploring traditional coffee washing stations, garden coffee cultivation, and authentic Sidama coffee ceremonies.`,
   },
   {
     id: 'language',

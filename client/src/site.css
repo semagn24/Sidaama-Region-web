@@ -375,9 +375,8 @@ p { text-wrap: pretty; }
 /* International Benchmark Styles: Utah & Hawaii inspired */
 .adventures-section { padding-block: 64px 72px; border-bottom: 1px solid var(--rule); background: var(--paper-light); }
 .adventures-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-top: 36px; }
-.adventure-card { display: flex; flex-direction: column; border: 1px solid var(--rule); background: var(--paper); padding: 24px; position: relative; transition: transform .2s, box-shadow .2s, border-color .2s; }
+.adventure-card { display: flex; flex-direction: column; border: 1px solid var(--rule); background: var(--paper); padding: 28px; position: relative; transition: transform .2s, box-shadow .2s, border-color .2s; }
 .adventure-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 14px 32px #17382c16; }
-.adventure-image { width: 100%; height: 200px; object-fit: cover; margin-bottom: 16px; border-radius: 2px; }
 .adventure-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
 .adventure-badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; background: var(--green-soft); color: var(--green-dark); }
 .adventure-elevation { font-size: 12px; font-weight: 600; color: #82662c; }
@@ -390,8 +389,7 @@ p { text-wrap: pretty; }
 /* Storytelling Section (GoHawaii inspired) */
 .storytelling-section { padding-block: 64px 72px; border-bottom: 1px solid var(--rule); }
 .stories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 28px; margin-top: 36px; }
-.story-card { background: var(--paper-light); border: 1px solid var(--rule); padding: 26px 24px; border-top: 3px solid var(--green); display: flex; flex-direction: column; justify-content: space-between; }
-.story-image { width: 100%; height: 210px; object-fit: cover; margin-bottom: 18px; border-radius: 2px; }
+.story-card { background: var(--paper-light); border: 1px solid var(--rule); padding: 30px 26px; border-top: 3px solid var(--green); display: flex; flex-direction: column; justify-content: space-between; }
 .story-role { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; color: var(--gold); font-weight: 700; margin-bottom: 8px; display: block; }
 .story-card h3 { margin: 0 0 12px; font-family: var(--serif); font-size: 21px; color: var(--green-dark); }
 .story-card p { margin: 0 0 18px; font-size: 14px; line-height: 1.75; color: var(--muted); }
