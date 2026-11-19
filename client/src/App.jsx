@@ -93,6 +93,17 @@ const translations = {
     'Numerals in Sidaamu Afoo': 'የሲዳሙ አፎ ቁጥሮች',
     'Count from 1 to 10 in Sidaamu Afoo.': 'በሲዳሙ አፎ ከ1 እስከ 10 ይቁጠሩ።',
     'Number': 'ቁጥር', 'Digit': 'አሃዝ',
+    'The Great 5 Adventures of Sidama': 'የሲዳማ ታላላቅ 5 ጉዞዎች',
+    'Unforgettable regional wonders from Rift Valley lakes to cloud coffee peaks.': 'ከስምጥ ሸለቆ ሐይቆች እስከ ደመናማ የቡና ተራሮች ድረስ የማይረሱ ድንቆች።',
+    'Explore all adventures': 'ሁሉንም ጉዞዎች ይመልከቱ',
+    'Elevation': 'ከፍታ', 'Distance': 'ርቀት', 'Best Season': 'ተስማሚ ወቅት',
+    'Explore adventure': 'ጉዞውን ይጀምሩ',
+    'People of the Land: Living Stories': 'የምድሪቱ ሕዝቦች፡ ሕያው ታሪኮች',
+    'Authentic voices from the elders, astronomers, coffee growers, and stewards of Sidama.': 'ከሲዳማ ሽማግሌዎች፣ የሰለስቲያል ተመልካቾች፣ የቡና አብቃዮችና ጠባቂዎች የተገኙ እውነተኛ ታሪኮች።',
+    'Travel with Halaale: Ethical Visitor Charter': 'በሃላሌ ይጓዙ፡ የጎብኚዎች የስነ-ምግባር ቃል ኪዳን',
+    'Honor the sacred heritage, protect ancient forests, and tread lightly with respect.': 'ቅዱስ ቅርሶችን ያክብሩ፣ ጥንታዊ ደኖችን ይጠብቁ፣ በአክብሮትና በሰላም ይጓዙ።',
+    'Curated Regional Itineraries': 'የተመረጡ ክልላዊ የጉዞ እቅዶች',
+    'Handcrafted travel routes to experience the best of Sidama culture, wildlife, and coffee.': 'የሲዳማን ባህል፣ የዱር አራዊትና ቡና በተሻለ ሁኔታ ለመለማመድ የተዘጋጁ የጉዞ መርሃ-ግብሮች።',
   },
   sid: {
     'Home': 'Mino', 'About Sidama': 'Sidama Qoqqowo', 'Culture & Heritage': 'Aadaa nna Kaima', 'Tourism': 'Turizime', 'Economy & Coffee': 'Ekonomi nna Buna',
@@ -147,6 +158,17 @@ const translations = {
     'Numerals in Sidaamu Afoo': 'Sidaamu Afooti Kiiro',
     'Count from 1 to 10 in Sidaamu Afoo.': 'Sidaamu Afoo garinni 1 geeshsha 10 kiiri.',
     'Number': 'Kiiro', 'Digit': 'Kiiro Malaate',
+    'The Great 5 Adventures of Sidama': 'Sidamu 5 Gedaano Ha’rooshsho',
+    'Unforgettable regional wonders from Rift Valley lakes to cloud coffee peaks.': 'Rift Valley baaleeti ka’e buna dandiino ilatanna woyite.',
+    'Explore all adventures': 'Baalunku ha’rooshsho leellishshe',
+    'Elevation': 'Keeraancho', 'Distance': 'Xeertinye', 'Best Season': 'Dancha Woyite',
+    'Explore adventure': 'Ha’rooshsho kaimi',
+    'People of the Land: Living Stories': 'Umu Daga: Lubboote Gara',
+    'Authentic voices from the elders, astronomers, coffee growers, and stewards of Sidama.': 'Cimeeyye, Ayyaanto, buna laalannori nna agarsiisanno manni gara.',
+    'Travel with Halaale: Ethical Visitor Charter': 'Halaalunni Ha’re: Daanno Manni Seera',
+    'Honor the sacred heritage, protect ancient forests, and tread lightly with respect.': 'Qullaawa kaima ayirrisi, durru mukka agari, nna ayirrinyeenni ha’ri.',
+    'Curated Regional Itineraries': 'Doono Ha’rooshshu Qineessamme',
+    'Handcrafted travel routes to experience the best of Sidama culture, wildlife, and coffee.': 'Sidamu aadaa, saada nna buna danchunni leellishate qixxaawino ha’rooshshu gara.',
   },
 }
 
@@ -177,6 +199,150 @@ const moreNavigation = [
   { label: 'Documents', to: '/documents' },
 ]
 
+// Utah-inspired Great 5 Adventures Showcase
+const greatAdventures = [
+  {
+    id: 'hawassa',
+    badge: 'Lakeside & Wildlife',
+    elevation: '1,708 m',
+    title: 'Lake Hawassa & The Fisherman’s Shore',
+    description: 'Boat safaris alongside pods of hippos, vibrant morning tilapia catches at Amora Gedel, and thousands of great white pelicans framing shimmering golden sunsets.',
+    distance: 'Hawassa City Center',
+    season: 'Year-Round',
+    image: '/lake-hawassa.jpg',
+    link: '/tourism',
+  },
+  {
+    id: 'wondo-genet',
+    badge: 'Wellness & Rainforest',
+    elevation: '1,850 m',
+    title: 'Wondo Genet Geothermal Springs',
+    description: 'Natural therapeutic hot springs, mineral swimming pools, colobus monkeys leaping overhead, and hiking through Ethiopia’s premier historic forestry arboretum.',
+    distance: '35 km from Hawassa',
+    season: 'Oct – May',
+    image: '/wondo-genet.jpg',
+    link: '/tourism',
+  },
+  {
+    id: 'logita',
+    badge: 'Highland Adventure',
+    elevation: '2,400 m',
+    title: 'Logita & Bonora Waterfall Gorges',
+    description: 'Torrential roaring cascades cutting through virgin green highland gorges in Bensa, surrounded by mist-drenched cloud forests and dramatic basalt amphitheaters.',
+    distance: '120 km (Bensa District)',
+    season: 'Nov – March',
+    image: '/logita-falls.jpg',
+    link: '/tourism',
+  },
+  {
+    id: 'loka-abaya',
+    badge: 'Wild Rift Valley',
+    elevation: '1,175 m',
+    title: 'Loka Abaya National Park Sanctuary',
+    description: '500 square kilometers of untamed acacia savannah, riverine wetlands bordering Lake Abaya, home to bushbucks, warthogs, and rare migratory waterbirds.',
+    distance: '70 km from Hawassa',
+    season: 'Oct – April',
+    image: '/loka-abaya.jpg',
+    link: '/tourism',
+  },
+  {
+    id: 'bensa-coffee',
+    badge: 'Agro-Tourism Heritage',
+    elevation: '2,200 – 2,800 m',
+    title: 'Bensa & Arbegona Cloud Coffee Trail',
+    description: 'The birthplace of Cup of Excellence champion micro-lots. Trek through family agroforests, witness raised drying beds, and participate in authentic coffee ceremonies.',
+    distance: 'Sidama Highlands',
+    season: 'Nov – Feb (Harvest)',
+    image: '/sidama-coffee-landscape.png',
+    link: '/economy',
+  },
+]
+
+// Hawaii-inspired Community Storytelling
+const communityStories = [
+  {
+    id: 'ayyaanto',
+    role: 'Living Celestial Heritage',
+    title: 'The Sky Watchers: Reading the Stars of Fichee',
+    excerpt: 'For centuries, traditional astronomers known as Ayyaanto have guided Sidama society by reading the alignment of the moon, stars, and seasonal constellations to proclaim the exact date of Fichee–Chambalaalla.',
+    quote: '“Halaale and the celestial order teach us that nature, cosmos, and community must always beat in unison.”',
+    image: '/ayyaanto-astronomy.jpg',
+  },
+  {
+    id: 'coffee-farmers',
+    role: 'Specialty Coffee Masters',
+    title: 'The Shade Garden Alchemists of Bensa',
+    excerpt: 'In misty mountain gardens situated at 2,200 meters, multi-generational Sidama farming families hand-pick only ruby-ripe cherries, nurturing heirloom trees beneath ancient canopies.',
+    quote: '“Every coffee bean carries our family’s honor, the red volcanic soil, and the breath of the high mountains.”',
+    image: '/sidama-coffee-harvest.png',
+  },
+  {
+    id: 'wesse-mothers',
+    role: 'Agrarian Food Sovereignty',
+    title: 'Wesse: The Living Tree Against Hunger',
+    excerpt: 'Fermenting the pulp of false banana into nourishing Waasa and festive Buurisame, Sidama mothers have preserved food security, soil moisture, and hospitality through generations.',
+    quote: '“Where Enset stands, drought and hunger find no doorway into our homes.”',
+    image: '/fichee-chambalaalla.png',
+  },
+]
+
+// Hawaii-inspired Ethical Visitor Code (Travel with Halaale)
+const visitorCharterItems = [
+  {
+    title: 'Honor Sacred Grounds',
+    text: 'Walk reverently on open-air Gudumaale ceremonial grounds, seeking permission from community elders and respecting sacred celebrations.',
+  },
+  {
+    title: 'Protect Indigenous Canopies',
+    text: 'Sidama customary law (Seera) strictly forbids cutting Podocarpus (Zigba) and Cordia (Wanza) trees. Tread lightly on forest and wetland trails.',
+  },
+  {
+    title: 'Support Local Cooperatives',
+    text: 'Purchase roasted coffee, handwoven textiles, and pottery directly from primary cooperative unions and village artisans to enrich local families.',
+  },
+  {
+    title: 'Embrace Peace (Keere)',
+    text: 'The traditional coffee ceremony is an invitation of peaceful fellowship. Receive every cup with two hands, warmth, and gratitude.',
+  },
+]
+
+// Flanders/Wallonia-inspired Curated Itineraries
+const curatedItineraries = [
+  {
+    duration: '1-Day Express',
+    title: 'Hawassa Lakeside & Cultural Highlights',
+    description: 'Perfect for weekend visitors wanting to capture the spirit and scenery of the regional capital.',
+    stops: [
+      'Early Morning: Amora Gedel Fish Market & Great White Pelicans',
+      'Mid-Day: Scenic Boat Safari on Lake Hawassa with Hippo Viewing',
+      'Afternoon: Hike Mount Tabor for 360-degree Rift Valley views',
+      'Evening: Traditional Sidama Cultural Dinner & Coffee Ceremony',
+    ],
+  },
+  {
+    duration: '3-Day Circuit',
+    title: 'Highlands, Hot Springs & Coffee Roots',
+    description: 'A rejuvenating blend of thermal springs, cloud forest hiking, and agro-industrial exploration.',
+    stops: [
+      'Day 1: Hawassa Lakeside Explorations & Cultural Center',
+      'Day 2: Wondo Genet Geothermal Springs, Thermal Pools & Birdwatching',
+      'Day 3: Yirgalem Integrated Agro-Industrial Park & Dale Coffee Farms',
+    ],
+  },
+  {
+    duration: '7-Day Grand Tour',
+    title: 'Complete Sidama Wilderness & Heritage Immersion',
+    description: 'The ultimate expedition across lakes, canyons, Cup of Excellence coffee trails, and savannahs.',
+    stops: [
+      'Days 1–2: Hawassa & Wondo Genet Hot Springs Exploration',
+      'Days 3–4: Bensa Highlands & Roaring Logita Waterfall Trekking',
+      'Day 5: Arbegona Cloud Coffee Gardens & Cooperative Washing Stations',
+      'Day 6: Loka Abaya National Park Safari & Lake Abaya Wetlands',
+      'Day 7: Return to Hawassa for Artisan Craft Markets & Departure',
+    ],
+  },
+]
+
 const localServices = [
   { id: '1', name: 'Specialty Coffee Export Certification', description: 'Facilitating origin certificates, laboratory cupping scores, and export compliance for cooperative unions and private washing stations in Sidama.', category: 'Coffee & Trade' },
   { id: '2', name: 'Business & Investment Licensing', description: 'One-stop regional support for agricultural processing, commercial farming, light manufacturing, and tourism hospitality permits.', category: 'Investment' },
@@ -199,6 +365,7 @@ function Icon({ name, size = 20 }) {
     chat: <><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l1.5-3A7.5 7.5 0 1 1 20 11.5Z" /><path d="M8 11h.01M12 11h.01M16 11h.01" /></>,
     send: <><path d="m22 2-7 20-4-9-9-4Z" /><path d="M22 2 11 13" /></>,
     leaf: <><path d="M20 4c-9 0-15 4-15 11a5 5 0 0 0 5 5c7 0 11-6 10-16Z" /><path d="M5 20c3-5 7-8 12-11" /></>,
+    compass: <><circle cx="12" cy="12" r="10" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" /></>,
   }
   return <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">{paths[name]}</svg>
 }
@@ -282,6 +449,104 @@ function NewsCard({ article, featured = false }) {
   </article>
 }
 
+// Great 5 Adventures Grid Component (Utah inspired)
+function AdventuresSection({ isStandalone = false }) {
+  const { t } = useLanguage()
+  return <section className="adventures-section" aria-labelledby="adventures-heading">
+    <div className="container">
+      <SectionHeading
+        id="adventures-heading"
+        title="The Great 5 Adventures of Sidama"
+        description="Unforgettable regional wonders from Rift Valley lakes to cloud coffee peaks."
+        link={isStandalone ? undefined : "Explore all adventures"}
+        to="/tourism"
+      />
+      <div className="adventures-grid">
+        {greatAdventures.map((adv) => <article key={adv.id} className="adventure-card">
+          {adv.image && <img className="adventure-image" src={adv.image} alt={t(adv.title)} loading="lazy" />}
+          <div className="adventure-header">
+            <span className="adventure-badge">{t(adv.badge)}</span>
+            <span className="adventure-elevation">{adv.elevation}</span>
+          </div>
+          <h3>{t(adv.title)}</h3>
+          <p>{t(adv.description)}</p>
+          <div className="adventure-meta">
+            <div><span>{t('Distance')}</span><strong>{adv.distance}</strong></div>
+            <div><span>{t('Best Season')}</span><strong>{adv.season}</strong></div>
+          </div>
+        </article>)}
+      </div>
+    </div>
+  </section>
+}
+
+// Storytelling Showcase Component (Hawaii inspired)
+function StorytellingSection() {
+  const { t } = useLanguage()
+  return <section className="storytelling-section" aria-labelledby="stories-heading">
+    <div className="container">
+      <SectionHeading
+        id="stories-heading"
+        title="People of the Land: Living Stories"
+        description="Authentic voices from the elders, astronomers, coffee growers, and stewards of Sidama."
+        link="Discover Sidama"
+        to="/culture"
+      />
+      <div className="stories-grid">
+        {communityStories.map((story) => <article key={story.id} className="story-card">
+          {story.image && <img className="story-image" src={story.image} alt={t(story.title)} loading="lazy" />}
+          <div>
+            <span className="story-role">{t(story.role)}</span>
+            <h3>{t(story.title)}</h3>
+            <p>{t(story.excerpt)}</p>
+          </div>
+          <blockquote className="story-quote">{story.quote}</blockquote>
+        </article>)}
+      </div>
+    </div>
+  </section>
+}
+
+// Ethical Visitor Code Component (Hawaii Malaphiya inspired)
+function VisitorCharterSection() {
+  const { t } = useLanguage()
+  return <section className="container" aria-labelledby="charter-heading">
+    <div className="charter-banner">
+      <h3 id="charter-heading">{t('Travel with Halaale: Ethical Visitor Charter')}</h3>
+      <p>{t('Honor the sacred heritage, protect ancient forests, and tread lightly with respect.')}</p>
+      <div className="charter-rules">
+        {visitorCharterItems.map((item) => <div key={item.title} className="charter-item">
+          <strong>{t(item.title)}</strong>
+          <span>{t(item.text)}</span>
+        </div>)}
+      </div>
+    </div>
+  </section>
+}
+
+// Curated Regional Itineraries Component (Flanders / Wallonia inspired)
+function ItinerarySection() {
+  const { t } = useLanguage()
+  return <section className="itineraries-section" aria-labelledby="itineraries-heading">
+    <div className="section-heading">
+      <div>
+        <h2 id="itineraries-heading">{t('Curated Regional Itineraries')}</h2>
+        <p>{t('Handcrafted travel routes to experience the best of Sidama culture, wildlife, and coffee.')}</p>
+      </div>
+    </div>
+    <div className="itinerary-grid">
+      {curatedItineraries.map((it) => <article key={it.title} className="itinerary-card">
+        <span className="itinerary-pill">{it.duration}</span>
+        <h4>{t(it.title)}</h4>
+        <p>{t(it.description)}</p>
+        <ul className="itinerary-stops">
+          {it.stops.map((stop, i) => <li key={i}>{stop}</li>)}
+        </ul>
+      </article>)}
+    </div>
+  </section>
+}
+
 function Home() {
   const { t } = useLanguage()
   const news = useApi('/news')
@@ -290,6 +555,12 @@ function Home() {
   const serviceItems = services.items.length ? services.items.slice(0, 3) : localServices
   return <main id="main-content">
     <section className="hero" aria-labelledby="home-heading"><div className="container hero-inner"><div className="hero-copy"><h1 id="home-heading">{t('A region of')}<br /><em>{t('promise & possibility.')}</em></h1><p>{t('Discover our people, culture, and shared vision for a thriving future in the heart of southern Ethiopia.')}</p><div className="hero-actions"><Link className="button button-gold" to="/about">{t('Discover Sidama')} <Icon name="arrow" size={17} /></Link><Link className="hero-secondary" to="/government">{t('Our government')} <Icon name="arrow" size={16} /></Link></div><div className="hero-note"><span className="note-line" /><span>{t('Welcome to Sidama')}</span><span aria-hidden="true">·</span><span>{t('A home for heritage. A future for all.')}</span></div></div><aside className="hero-visual" aria-label={t('Sidama Regional State')}><h2>{t('Rooted in heritage.')}<br /><em>{t('Growing together.')}</em></h2><p>{t('From the fertile highlands and celebrated coffee farms to the warmth of our communities, Sidama is a region shaped by resilience, rich traditions, and a bold vision for tomorrow.')}</p><div className="hero-stat"><p><strong>{t('One')}</strong><span>{t('regional state, many communities')}</span></p><span>{t('A diverse region connected by a shared future')}</span></div></aside></div></section>
+    
+    {/* International Benchmark Upgrades */}
+    <AdventuresSection />
+    <StorytellingSection />
+    <VisitorCharterSection />
+
     <section className="services-section" aria-labelledby="services-heading"><div className="container"><SectionHeading id="services-heading" title="Services for every community" description="Explore information and support from regional institutions." link="View all services" to="/services" />{services.error && <p className="api-note" role="status">{t(services.error)}</p>}<div className="service-grid">{serviceItems.map((item) => <ServiceCard key={item.id} service={item} />)}</div></div></section>
     <section className="news-section" aria-labelledby="news-heading"><div className="container"><SectionHeading id="news-heading" title="News & updates" description="Stories, announcements, and the latest from across Sidama." link="All news" to="/news" />{news.error && <p className="api-note" role="status">{t(news.error)}</p>}<div className="news-grid">{articles.map((item, index) => <NewsCard key={item.id} article={item} featured={index === 0} />)}</div></div></section>
     <section className="cta-section"><div className="container cta-inner"><h2>{t('Find your opportunity')}<br /><em>{t('in Sidama.')}</em></h2><div><p>{t('Explore investment potential, connect with our institutions, and be part of our region’s progress.')}</p><Link className="button button-outline" to="/investment">{t('Explore investment')} <Icon name="arrow" size={17} /></Link></div></div></section>
@@ -315,6 +586,8 @@ const pages = {
     title: 'Culture carried forward.',
     intro: 'Sidama culture is celebrated for its deep moral philosophy of Halaale, democratic generational governance, culinary mastery of Enset, and the UNESCO-inscribed Fichee–Chambalaalla festival.',
     cultureImage: { src: '/fichee-chambalaalla.png', alt: 'Sidama elders and youth in cultural attire celebrating at Gudumaale', caption: 'Fichee–Chambalaalla brings all generations together in Hawassa and across Sidama.' },
+    showStorytelling: true,
+    showVisitorCharter: true,
     sections: [
       ['Fichee–Chambalaalla: UNESCO World Heritage', 'Fichee–Chambalaalla is the grand Sidama New Year festival, inscribed by UNESCO on the Representative List of the Intangible Cultural Heritage of Humanity in November 2015. Rooted in oral tradition celebrating a married daughter who annually visited her family with a nourishing dish of enset, butter, and milk, the festival has grown into a powerful symbol of unity, hospitality, and communal sharing.'],
       ['Ayyaanto: traditional astronomers & calendar', 'The date of Fichee is not fixed on a modern calendar; it is precisely determined each year by traditional astronomers and astrologers known as Ayyaanto. By tracking the lunar cycle, constellations, and the movement of the stars, the Ayyaanto proclaim the exact day of the New Year to community clans.'],
@@ -328,6 +601,9 @@ const pages = {
     eyebrow: 'Discover Sidama',
     title: 'A journey worth taking.',
     intro: 'From bird-rich Rift Valley lakes and therapeutic natural hot springs to roaring mountain waterfalls and mist-covered coffee forests, Sidama is a premier ecotourism haven.',
+    showAdventures: true,
+    showItineraries: true,
+    showVisitorCharter: true,
     sections: [
       ['Lake Hawassa & Amora Gedel fish market', 'Lake Hawassa is a scenic, freshwater Rift Valley lake framed by acacia trees and hills. At the bustling Amora Gedel morning fish market, visitors observe fishermen landing fresh tilapia and catfish amidst massive, photogenic flocks of marabou storks, great white pelicans, and playful colobus monkeys in the shoreline canopy.'],
       ['Mount Tabor: panoramic vistas', 'Rising beside Hawassa city, Mount Tabor offers a scenic hiking route and a breathtaking 360-degree panoramic lookout over the expanding city skyline, lush green farmlands, and the sparkling expanse of Lake Hawassa.'],
@@ -559,7 +835,7 @@ function NumbersSection({ numbersTable }) {
 
 function InfoPage({ page }) {
   const { t } = useLanguage()
-  return <main id="main-content" className="page-main"><div className="container"><div className="page-heading"><h1>{t(page.title)}</h1><p>{t(page.intro)}</p></div>{page.coffeeFeature && <section className="coffee-feature" aria-labelledby="coffee-feature-heading"><img src={page.coffeeFeature.image} alt={t(page.coffeeFeature.alt)} /><div className="coffee-feature-copy"><h2 id="coffee-feature-heading">{t(page.coffeeFeature.title)}</h2><p>{t(page.coffeeFeature.copy)}</p></div></section>}{page.coffeeLandscape && <figure className="coffee-landscape"><img src={page.coffeeLandscape.image} alt={t(page.coffeeLandscape.alt)} /><figcaption>{t(page.coffeeLandscape.caption)}</figcaption></figure>}{page.cultureImage && <figure className="culture-image"><img src={page.cultureImage.src} alt={t(page.cultureImage.alt)} /><figcaption>{t(page.cultureImage.caption)}</figcaption></figure>}<div className="info-layout"><aside className="info-aside" aria-label={t('Sidama Regional State')}><span className="aside-leaf"><Icon name="leaf" size={32} /></span><p>{t('Sidama Regional State')}</p><span>{t('Southern Ethiopia')}</span></aside><div className="info-sections">{page.sections.map(([title, copy], index) => <article className="info-row" key={title}><span className="info-index">{String(index + 1).padStart(2, '0')}</span><div><h2>{t(title)}</h2><p>{t(copy)}</p></div></article>)}</div></div>{page.vocabularyTable && <VocabularySection vocabularyTable={page.vocabularyTable} />}{page.numbersTable && <NumbersSection numbersTable={page.numbersTable} />}{page.zones && <AdministrativeDivisions zones={page.zones} city={page.city} districtPopulation={page.districtPopulation} />}<div className="page-cta"><p>{t('Want to learn more or get in touch?')}</p><Link className="button button-green" to="/contact">{t('Contact us')} <Icon name="arrow" size={17} /></Link></div></div></main>
+  return <main id="main-content" className="page-main"><div className="container"><div className="page-heading"><h1>{t(page.title)}</h1><p>{t(page.intro)}</p></div>{page.coffeeFeature && <section className="coffee-feature" aria-labelledby="coffee-feature-heading"><img src={page.coffeeFeature.image} alt={t(page.coffeeFeature.alt)} /><div className="coffee-feature-copy"><h2 id="coffee-feature-heading">{t(page.coffeeFeature.title)}</h2><p>{t(page.coffeeFeature.copy)}</p></div></section>}{page.coffeeLandscape && <figure className="coffee-landscape"><img src={page.coffeeLandscape.image} alt={t(page.coffeeLandscape.alt)} /><figcaption>{t(page.coffeeLandscape.caption)}</figcaption></figure>}{page.cultureImage && <figure className="culture-image"><img src={page.cultureImage.src} alt={t(page.cultureImage.alt)} /><figcaption>{t(page.cultureImage.caption)}</figcaption></figure>}<div className="info-layout"><aside className="info-aside" aria-label={t('Sidama Regional State')}><span className="aside-leaf"><Icon name="leaf" size={32} /></span><p>{t('Sidama Regional State')}</p><span>{t('Southern Ethiopia')}</span></aside><div className="info-sections">{page.sections.map(([title, copy], index) => <article className="info-row" key={title}><span className="info-index">{String(index + 1).padStart(2, '0')}</span><div><h2>{t(title)}</h2><p>{t(copy)}</p></div></article>)}</div></div>{page.showAdventures && <AdventuresSection isStandalone={true} />}{page.showItineraries && <ItinerarySection />}{page.showStorytelling && <StorytellingSection />}{page.showVisitorCharter && <VisitorCharterSection />}{page.vocabularyTable && <VocabularySection vocabularyTable={page.vocabularyTable} />}{page.numbersTable && <NumbersSection numbersTable={page.numbersTable} />}{page.zones && <AdministrativeDivisions zones={page.zones} city={page.city} districtPopulation={page.districtPopulation} />}<div className="page-cta"><p>{t('Want to learn more or get in touch?')}</p><Link className="button button-green" to="/contact">{t('Contact us')} <Icon name="arrow" size={17} /></Link></div></div></main>
 }
 
 function ListingPage({ type }) {
